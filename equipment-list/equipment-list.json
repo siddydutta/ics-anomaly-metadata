@@ -1,0 +1,638 @@
+[
+  {
+    "equipment_lists": [
+      {
+        "stage": "P1",
+        "equipments": [
+          {
+            "description": "Raw Water Tank",
+            "design_specification": "Capacity: 1.8m\u00b3 Dia x H= 1.38 x 1.36",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CPE 1800",
+            "remarks": "T101",
+            "type": "actuator"
+          },
+          {
+            "description": "Raw Water Transfer Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 203",
+            "remarks": "P101/102",
+            "type": "actuator"
+          },
+          {
+            "description": "Raw Water Tank LIT",
+            "design_specification": "Ultrasonic, Range 0.2 to 6m",
+            "material": "Non Contact",
+            "quantity": "1",
+            "brand_model": "iSOLV LevelWizard II",
+            "remarks": "LIT101",
+            "type": "sensor"
+          },
+          {
+            "description": "Raw Water FIT",
+            "design_specification": "Electromagnetic DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "iSOLV EFS803/CFT183",
+            "remarks": "FIT101",
+            "type": "sensor"
+          },
+          {
+            "description": "Piping",
+            "design_specification": "SCH80",
+            "material": "PVC",
+            "quantity": "Lot",
+            "brand_model": "Glynwed",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "Raw Water Inlet On/Off Valve",
+            "design_specification": "DN 25, Electric Actuated",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "Burkert EV2650",
+            "remarks": "MV101",
+            "type": "actuator"
+          },
+          {
+            "description": "PRV",
+            "design_specification": "DN 25",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "Prominent DHV-DM PVC",
+            "remarks": "",
+            "type": "actuator"
+          }
+        ]
+      },
+      {
+        "stage": "P2",
+        "equipments": [
+          {
+            "description": "NaCI Tank",
+            "design_specification": "Capacity: 250l",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CGD 250",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "NaCI Dosing Pump",
+            "design_specification": "Capacity: 50 l/h @ 10 bar",
+            "material": "Liquid end: PVDF Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent Sigma S1Ba",
+            "remarks": "P201/202",
+            "type": "actuator"
+          },
+          {
+            "description": "HCI Tank",
+            "design_specification": "Capacity: 250l Capacity: 25l (9% HCI)",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CGD 250 25L Carboy",
+            "remarks": "Double Containment",
+            "type": "actuator"
+          },
+          {
+            "description": "HCI Dosing Pump",
+            "design_specification": "Capacity: 0.78 l/h @ 08 bar",
+            "material": "Liquid end: Plexiglas Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent GALa1601",
+            "remarks": "P203/204",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCI Tank",
+            "design_specification": "Capacity: 250l",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "CGD 250",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCI Dosing Pump (FAC)",
+            "design_specification": "Capacity: 0.78 l/h @ 8 bar",
+            "material": "Liquid end: Plexiglas Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent GALa1601",
+            "remarks": "P205/206",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCI Dosing Pump (UF Cleaning)",
+            "design_specification": "Capacity: 65l/h @ 7 bar",
+            "material": "Liquid end: PVDF Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent Sigma S1Ba",
+            "remarks": "P207/208",
+            "type": "actuator"
+          },
+          {
+            "description": "Static Mixer",
+            "design_specification": "2\" NPT M/ 12 elements",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "Omega",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "Raw Water to UF Feed Tank FIT",
+            "design_specification": "Electromagnetic DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "iSOLV EFS803/CFT183",
+            "remarks": "FIT201",
+            "type": "sensor"
+          },
+          {
+            "description": "AIT - Conductivity",
+            "design_specification": "Up to 1000\u00b5S/cm",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "Mettler Toledo M300 Single/ easySense Cond 71",
+            "remarks": "AIT201",
+            "type": "sensor"
+          },
+          {
+            "description": "AIT - pH & ORP",
+            "design_specification": "pH: 0-14 ORP: -800mV to 800mV",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+            "remarks": "AIT202/203",
+            "type": "sensor"
+          },
+          {
+            "description": "NaCI Level Switch",
+            "design_specification": "Low Alarm",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "iSOLV LS880",
+            "remarks": "LS201",
+            "type": "actuator"
+          },
+          {
+            "description": "HCI Level Switch",
+            "design_specification": "Low Alarm",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "iSOLV LS880",
+            "remarks": "LS202",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCI Level Switch",
+            "design_specification": "Low Alarm",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "iSOLV LS880",
+            "remarks": "LS203",
+            "type": "actuator"
+          },
+          {
+            "description": "Piping",
+            "design_specification": "SCH80",
+            "material": "PVC",
+            "quantity": "Lot",
+            "brand_model": "Glynwed",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "Raw Water Tank Outlet On/Off Valve",
+            "design_specification": "DN 25, Electric Actuated",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "Burkert EV2650",
+            "remarks": "MV201",
+            "type": "actuator"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "equipment_lists": [
+      {
+        "stage": "P3",
+        "equipments": [
+          {
+            "description": "UF Membranes",
+            "design_specification": "2.5 m\u00b2/h",
+            "material": "PVDF",
+            "quantity": "1",
+            "brand_model": "TORAY HFU-2020",
+            "remarks": null,
+            "type": "actuator"
+          },
+          {
+            "description": "UF Feedwater Tank",
+            "design_specification": "Capacity: 1.8m\u00b3, Dia x H= 1.38 x 1.36",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CPE 1800",
+            "remarks": "T301",
+            "type": "actuator"
+          },
+          {
+            "description": "UF Feedwater Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 203",
+            "remarks": "P301/302",
+            "type": "actuator"
+          },
+          {
+            "description": "UF Feed Water Tank LIT",
+            "design_specification": "Ultrasonic, Range 0.2 to 6m",
+            "material": "Non Contact",
+            "quantity": "1",
+            "brand_model": "ISOLV LevelWizard II",
+            "remarks": "LIT301",
+            "type": "sensor"
+          },
+          {
+            "description": "UF Feed Water FIT",
+            "design_specification": "Electromagnetic, DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "ISOLV EFS803/CFT183",
+            "remarks": "FIT301",
+            "type": "sensor"
+          },
+          {
+            "description": "UF Feed Water FI",
+            "design_specification": "Rotameter, 1\"",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "FSI Flowmeter",
+            "remarks": "FI301",
+            "type": "sensor"
+          },
+          {
+            "description": "Pressure Switch",
+            "design_specification": "Switch High/ 0-7 Bar, Adjustable",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "CCS 604G2",
+            "remarks": "PSH301",
+            "type": "sensor"
+          },
+          {
+            "description": "Differential Pressure Switch",
+            "design_specification": "Switch High/ 0-1 Bar",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "CCS 604DZ",
+            "remarks": "DPSH301",
+            "type": "sensor"
+          },
+          {
+            "description": "Differential Pressure Indicating Transmitter",
+            "design_specification": "Range: 0-2 Bar",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "SPT 100 DP",
+            "remarks": "DPIT301",
+            "type": "sensor"
+          },
+          {
+            "description": "Piping & Manual Valves",
+            "design_specification": "SCH80",
+            "material": "PVC",
+            "quantity": "Lot",
+            "brand_model": "Glywed",
+            "remarks": null,
+            "type": "actuator"
+          },
+          {
+            "description": "PRV",
+            "design_specification": "DN 25",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "Prominent DHV-DM PVC",
+            "remarks": null,
+            "type": "actuator"
+          },
+          {
+            "description": "Backwash On/Off Valve",
+            "design_specification": "DN 25, Electric Actuated",
+            "material": "PVC",
+            "quantity": "4",
+            "brand_model": "Burkert EV2650",
+            "remarks": "MV301/2/3/4",
+            "type": "actuator"
+          }
+        ]
+      },
+      {
+        "stage": "P4",
+        "equipments": [
+          {
+            "description": "RO Feedwater Tank",
+            "design_specification": "Capacity: 1.8m\u00b3, Dia x H= 1.38 x 1.36",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CPE 1800",
+            "remarks": "T401",
+            "type": "actuator"
+          },
+          {
+            "description": "RO Feedwater Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 203",
+            "remarks": "P401/402",
+            "type": "actuator"
+          },
+          {
+            "description": "NaHSO\u2083 Tank",
+            "design_specification": "Capacity: 250l, Capacity: 25l (10% NaHSO\u2083)",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CGD 250, 25L Carboy",
+            "remarks": "Double Containment",
+            "type": "actuator"
+          },
+          {
+            "description": "NaHSO\u2083 Dosing Pump",
+            "design_specification": "Capacity: 0.78 l/h @ 8 bar",
+            "material": "Liquid end: Plexiglas, Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent GALa1601",
+            "remarks": "P403/404",
+            "type": "actuator"
+          },
+          {
+            "description": "UV Unit",
+            "design_specification": "Removal up to 0.5ppm, 2.3m\u00b3/h",
+            "material": "SS316",
+            "quantity": "1",
+            "brand_model": "Aquafine Optima 200",
+            "remarks": "UV401",
+            "type": "actuator"
+          },
+          {
+            "description": "RO Feed Water Tank LIT",
+            "design_specification": "Ultrasonic, Range 0.2 to 6m",
+            "material": "Non Contact",
+            "quantity": "1",
+            "brand_model": "ISOLV LevelWizard II",
+            "remarks": "LIT401",
+            "type": "sensor"
+          },
+          {
+            "description": "Hardness Monitor",
+            "design_specification": "Range: 0-10ppm",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "HACH APA 6000",
+            "remarks": "AIT401",
+            "type": "sensor"
+          },
+          {
+            "description": "AIT ~ORP",
+            "design_specification": "ORP: -800mV to 800mV",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "Mettler Toledo M200 Single/easySense ORP 41",
+            "remarks": "AIT402",
+            "type": "sensor"
+          },
+          {
+            "description": "RO Feed FIT",
+            "design_specification": "Electromagnetic, DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "ISOLV EFS803/CFT183",
+            "remarks": "FIT401",
+            "type": "sensor"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "equipment_lists": [
+      {
+        "stage": "P5",
+        "equipments": [
+          {
+            "description": "AIT - pH & ORP (RO Feed)",
+            "design_specification": "pH: 0-14 ORP: -800mV to 800mV",
+            "material": "-",
+            "quantity": null,
+            "brand_model": "Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+            "remarks": "AIT501 / 502",
+            "type": "sensor"
+          },
+          {
+            "description": "Pressure Switch (Before High Pressure RO Pump)",
+            "design_specification": "Low Alarm: 0-10 Bar (Adjustable)",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "CCS 604G2",
+            "remarks": "PSL501",
+            "type": "actuator"
+          },
+          {
+            "description": "Pressure Switch (After High Pressure RO Pump)",
+            "design_specification": "High Alarm: 0-10 Bar (Adjustable)",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "CCS 604G1",
+            "remarks": "PSH501",
+            "type": "actuator"
+          },
+          {
+            "description": "PIT (After High Pressure RO Pump)",
+            "design_specification": "0-10 Bar",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "iSOLV SPT 100",
+            "remarks": "PIT501",
+            "type": "sensor"
+          },
+          {
+            "description": "FIT (RO Concentrate)",
+            "design_specification": "0-10 Bar",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "iSOLV SPT 100",
+            "remarks": "PIT503",
+            "type": "sensor"
+          },
+          {
+            "description": "FIT (RO Permeate)",
+            "design_specification": "0-10 Bar",
+            "material": "SS316 Port",
+            "quantity": "1",
+            "brand_model": "iSOLV SPT 100",
+            "remarks": "PIT502",
+            "type": "sensor"
+          },
+          {
+            "description": "AIT - Conductivity (RO Feed)",
+            "design_specification": "Up to 1000\u03bcS/cm",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "Mettler Toledo M300 Dual/ easySense Cond 71",
+            "remarks": "AIT503",
+            "type": "sensor"
+          },
+          {
+            "description": "FIT (RO Concentrate)",
+            "design_specification": "Electromagnetic DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "iSOLV EFS803/CFT183",
+            "remarks": "FIT503",
+            "type": "sensor"
+          },
+          {
+            "description": "AIT - Conductivity (RO Permeate)",
+            "design_specification": "Range: 0.02 to 20 \u03bcS/cm",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "easySense Cond 71",
+            "remarks": "AIT504",
+            "type": "sensor"
+          },
+          {
+            "description": "FIT (RO Recirculation)",
+            "design_specification": "Electromagnetic DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "iSOLV EFS803/CFT183",
+            "remarks": "FIT504",
+            "type": "sensor"
+          }
+        ]
+      },
+      {
+        "stage": "P6",
+        "equipments": [
+          {
+            "description": "RO Permeate Tank",
+            "design_specification": "Capacity: 1.2m\u00b3 Dia\u00d7H = 1.16 x 1.24",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CPE 1200",
+            "remarks": "T601",
+            "type": "actuator"
+          },
+          {
+            "description": "Pre RO Cartridge Filter",
+            "design_specification": "Heavy Duty Multi-Cartridge Housing Max Pressure: 125PSI Number of Cartridges & Size: (4) 10\" Flowrate: 28 GPM Element: 1 Micron",
+            "material": "SS304 Housing",
+            "quantity": "1",
+            "brand_model": "Graver 4MCI-VB-316L-1.5N-B",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "RO Permeate Transfer Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS",
+            "quantity": "1",
+            "brand_model": "CALPEDA MXP 203",
+            "remarks": "P601",
+            "type": "actuator"
+          },
+          {
+            "description": "UF Backwash Tank",
+            "design_specification": "Capacity: 1.2m\u00b3 Dia\u00d7H = 1.16 x 1.24",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "Rotamas CPE 1200",
+            "remarks": "T602",
+            "type": "actuator"
+          },
+          {
+            "description": "UF Backwash Tank Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS",
+            "quantity": "1",
+            "brand_model": "CALPEDA MXP 203",
+            "remarks": "P602",
+            "type": "actuator"
+          },
+          {
+            "description": "CIP Tank (UF/RO)",
+            "design_specification": "Capacity: 550l",
+            "material": "PE",
+            "quantity": "1",
+            "brand_model": "CGD 550",
+            "remarks": "",
+            "type": "actuator"
+          },
+          {
+            "description": "CIP Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS",
+            "quantity": "1",
+            "brand_model": "CALPEDA MXP 203",
+            "remarks": "P603",
+            "type": "actuator"
+          },
+          {
+            "description": "RO Permeate Tank Level Switch",
+            "design_specification": "Low & High Alarm",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "iSOLV L5880",
+            "remarks": "LS601",
+            "type": "actuator"
+          },
+          {
+            "description": "UF Backwash Tank Level Switch",
+            "design_specification": "Low & High Alarm",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "iSOLV L5880",
+            "remarks": "LS602",
+            "type": "actuator"
+          },
+          {
+            "description": "CIP Tank Level Switch",
+            "design_specification": "Low & High Alarm",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "iSOLV L5880",
+            "remarks": "LS603",
+            "type": "actuator"
+          },
+          {
+            "description": "FIT (UF Backwash)",
+            "design_specification": "Electromagnetic DN25",
+            "material": "PTFE",
+            "quantity": "1",
+            "brand_model": "iSOLV EFS803/CFT180",
+            "remarks": "FIT601",
+            "type": "sensor"
+          },
+          {
+            "description": "FI (RO/UF Cleaning)",
+            "design_specification": "Rotameter; 1\"",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "FSIV Flowmeter",
+            "remarks": "FI601/2",
+            "type": "sensor"
+          }
+        ]
+      }
+    ]
+  }
+]
