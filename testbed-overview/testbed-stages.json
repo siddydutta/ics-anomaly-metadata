@@ -1,0 +1,36 @@
+[
+  {
+    "stage_id": "P1",
+    "stage_name": "Raw Water Intake",
+    "description": "Takes in raw water as the first step of the water treatment process.",
+    "components": [
+      {
+        "component_id": "",
+        "role": ""
+      }
+    ]
+  },
+  {
+    "stage_id": "P1",
+    "stage_name": "Raw water supply & storage",
+    "description": "Stores and supplies raw water to the treatment process. Involves raw water tank, pumps, and initial flow measurement.",
+    "components": [
+      {
+        "component_id": "LIT101",
+        "role": "Raw water tank level sensor"
+      },
+      {
+        "component_id": "MV101",
+        "role": "Inlet control valve for raw water tank"
+      },
+      {
+        "component_id": "FIT101",
+        "role": "Raw water flow sensor"
+      },
+      {
+        "component_id": "P101",
+        "role": "Raw water pump"
+      }
+    ]
+  }
+]
