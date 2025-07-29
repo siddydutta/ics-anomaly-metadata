@@ -20,3 +20,9 @@ python extract_attack_technique.py
 cd equipment-list/
 python extract_equipment_list.py 9a083ae4-3fae-4619-91e8-6a3d13513372
 ```
+
+## PID Diagrams
+```shell
+cd pid-diagrams/
+python extract_pid_diagrams.py 5c2ae8f2-1ab4-4db5-a358-26bd1188d6a9
+```
