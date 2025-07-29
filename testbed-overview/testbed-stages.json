@@ -1,17 +1,6 @@
 [
   {
     "stage_id": "P1",
-    "stage_name": "Raw Water Intake",
-    "description": "Takes in raw water as the first step of the water treatment process.",
-    "components": [
-      {
-        "component_id": "",
-        "role": ""
-      }
-    ]
-  },
-  {
-    "stage_id": "P1",
     "stage_name": "Raw water supply & storage",
     "description": "Stores and supplies raw water to the treatment process. Involves raw water tank, pumps, and initial flow measurement.",
     "components": [
@@ -30,6 +19,117 @@
       {
         "component_id": "P101",
         "role": "Raw water pump"
+      }
+    ]
+  },
+  {
+    "stage_id": "P2",
+    "stage_name": "Chemical dosing",
+    "description": "Involves dosing the raw water with chemicals such as HCl, NaOCl, and NaCl to adjust pH and disinfect. A static mixer ensures proper mixing.",
+    "components": [
+      {
+        "component_id": "P201",
+        "role": "HCl dosing pump"
+      },
+      {
+        "component_id": "P203",
+        "role": "NaOCl dosing pump"
+      },
+      {
+        "component_id": "P205",
+        "role": "NaCl dosing pump"
+      },
+      {
+        "component_id": "FIT201",
+        "role": "Flow indicator transmitter for chemical dosing"
+      },
+      {
+        "component_id": "AIT201",
+        "role": "Analyzer indicator transmitter for chemical properties"
+      },
+      {
+        "component_id": "AIT202",
+        "role": "Analyzer indicator transmitter for pH"
+      },
+      {
+        "component_id": "AIT203",
+        "role": "Analyzer indicator transmitter for chlorine levels"
+      },
+      {
+        "component_id": "MV201",
+        "role": "Motorized valve for controlling flow after static mixer"
+      }
+    ]
+  },
+  {
+    "stage_id": "P3",
+    "stage_name": "Ultrafiltration (UF)",
+    "description": "Filters the chemically treated water through an ultrafiltration unit to remove fine particles and impurities.",
+    "components": [
+      {
+        "component_id": "LIT301",
+        "role": "UF feed tank level sensor"
+      },
+      {
+        "component_id": "DPIT301",
+        "role": "Differential pressure indicator transmitter for UF unit"
+      },
+      {
+        "component_id": "P301",
+        "role": "UF feed pump"
+      }
+    ]
+  },
+  {
+    "stage_id": "P4",
+    "stage_name": "Dechlorination",
+    "description": "Dechlorinates the filtered water using UV lamps and adds NaHSO3 to neutralize residual chlorine. The water is then stored in an RO feed tank.",
+    "components": [
+      {
+        "component_id": "P401",
+        "role": "RO feed pump"
+      },
+      {
+        "component_id": "LIT401",
+        "role": "RO feed tank level sensor"
+      },
+      {
+        "component_id": "FIT401",
+        "role": "Flow indicator transmitter for RO feed"
+      },
+      {
+        "component_id": "AIT402",
+        "role": "Analyzer indicator transmitter for dechlorination process"
+      }
+    ]
+  },
+  {
+    "stage_id": "P5",
+    "stage_name": "Reverse Osmosis (RO)",
+    "description": "Processes the dechlorinated water through a reverse osmosis unit to remove dissolved salts and impurities, producing permeate and reject streams.",
+    "components": [
+      {
+        "component_id": "P501",
+        "role": "RO boost pump"
+      },
+      {
+        "component_id": "AIT503",
+        "role": "Analyzer indicator transmitter for cartridge filter"
+      },
+      {
+        "component_id": "AIT504",
+        "role": "Analyzer indicator transmitter for RO permeate"
+      }
+    ]
+  },
+  {
+    "stage_id": "P6",
+    "stage_name": "RO permeate transfer, UF backwash",
+    "description": "Uses RO permeate to backwash and clean the UF membranes, recycling water back into the process.",
+    "components": [
+      {
+        "component_id": "P602",
+        "role": "UF backwash pump"
       }
     ]
   }
