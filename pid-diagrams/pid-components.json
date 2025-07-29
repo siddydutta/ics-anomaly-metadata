@@ -1,1033 +1,423 @@
-[
-  {
-    "stages": [
-      {
-        "stage_id": "RAW WATER SUPPLY",
-        "components": [
-          {
-            "component_id": "RWS",
-            "connections": [
-              {
-                "from": "RWS",
-                "to": "E-1",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E-1",
-            "connections": [
-              {
-                "from": "E-1",
-                "to": "T-101",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "T-101",
-            "connections": [
-              {
-                "from": "T-101",
-                "to": "E-2",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E-2",
-            "connections": [
-              {
-                "from": "E-2",
-                "to": "P-101",
-                "via": "pipe"
-              },
-              {
-                "from": "E-2",
-                "to": "P-102",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-101",
-            "connections": [
-              {
-                "from": "P-101",
-                "to": "FI",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-102",
-            "connections": [
-              {
-                "from": "P-102",
-                "to": "FI",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "FI",
-            "connections": [
-              {
-                "from": "FI",
-                "to": "E-3",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E-3",
-            "connections": [
-              {
-                "from": "E-3",
-                "to": "Mixer",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "stage_id": "CHEMICAL DOSING",
-        "components": [
-          {
-            "component_id": "CS",
-            "connections": [
-              {
-                "from": "CS",
-                "to": "E-4",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E-4",
-            "connections": [
-              {
-                "from": "E-4",
-                "to": "T-201",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "T-201",
-            "connections": [
-              {
-                "from": "T-201",
-                "to": "E-5",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E-5",
-            "connections": [
-              {
-                "from": "E-5",
-                "to": "P-201",
-                "via": "pipe"
-              },
-              {
-                "from": "E-5",
-                "to": "P-202",
-                "via": "pipe"
-              },
-              {
-                "from": "E-5",
-                "to": "P-203",
-                "via": "pipe"
-              },
-              {
-                "from": "E-5",
-                "to": "P-204",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-201",
-            "connections": [
-              {
-                "from": "P-201",
-                "to": "E-6",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-202",
-            "connections": [
-              {
-                "from": "P-202",
-                "to": "E-6",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-203",
-            "connections": [
-              {
-                "from": "P-203",
-                "to": "E-6",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-204",
-            "connections": [
-              {
-                "from": "P-204",
-                "to": "E-6",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E-6",
-            "connections": [
-              {
-                "from": "E-6",
-                "to": "Mixer",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "stage_id": "MIXING & TRANSFER",
-        "components": [
-          {
-            "component_id": "Mixer",
-            "connections": [
-              {
-                "from": "E-3",
-                "to": "Mixer",
-                "via": "pipe"
-              },
-              {
-                "from": "E-6",
-                "to": "Mixer",
-                "via": "pipe"
-              },
-              {
-                "from": "Mixer",
-                "to": "TO PROCESS",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "stages": [
-      {
-        "stage_id": "P3 (Ultrafiltration)",
-        "components": [
-          {
-            "component_id": "P-301",
-            "connections": [
-              {
-                "from": "P-301",
-                "to": "PIT 301",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-302",
-            "connections": [
-              {
-                "from": "P-302",
-                "to": "PIT 302",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PIT 301",
-            "connections": [
-              {
-                "from": "PIT 301",
-                "to": "Magnetic",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PIT 302",
-            "connections": [
-              {
-                "from": "PIT 302",
-                "to": "Magnetic",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "Magnetic",
-            "connections": [
-              {
-                "from": "Magnetic",
-                "to": "FIT 301",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "FIT 301",
-            "connections": [
-              {
-                "from": "FIT 301",
-                "to": "UF FEED",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UF FEED",
-            "connections": [
-              {
-                "from": "UF FEED",
-                "to": "Rotameter",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "Rotameter",
-            "connections": [
-              {
-                "from": "Rotameter",
-                "to": "UF Membrane",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UF Membrane",
-            "connections": [
-              {
-                "from": "UF Membrane",
-                "to": "MV-304",
-                "via": "pipe"
-              },
-              {
-                "from": "UF Membrane",
-                "to": "PIT 303",
-                "via": "pipe"
-              },
-              {
-                "from": "UF Membrane",
-                "to": "PIT 304",
-                "via": "pipe"
-              },
-              {
-                "from": "UF Membrane",
-                "to": "FIT 302",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "MV-304",
-            "connections": [
-              {
-                "from": "MV-304",
-                "to": "UF REJECT",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UF REJECT",
-            "connections": [
-              {
-                "from": "UF REJECT",
-                "to": "Drain",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "FIT 302",
-            "connections": [
-              {
-                "from": "FIT 302",
-                "to": "UF 301",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UF 301",
-            "connections": [
-              {
-                "from": "UF 301",
-                "to": "MV-305",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "MV-305",
-            "connections": [
-              {
-                "from": "MV-305",
-                "to": "UF DRAIN",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "MV-301",
-            "connections": [
-              {
-                "from": "MV-301",
-                "to": "UF PERMEATE",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UF PERMEATE",
-            "connections": [
-              {
-                "from": "UF PERMEATE",
-                "to": "MV-302",
-                "via": "pipe"
-              },
-              {
-                "from": "UF PERMEATE",
-                "to": "MV-303",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "MV-302",
-            "connections": [
-              {
-                "from": "MV-302",
-                "to": "RO Feed Water Tank",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "MV-303",
-            "connections": [
-              {
-                "from": "MV-303",
-                "to": "Sample",
-                "via": "pipe"
-              },
-              {
-                "from": "MV-303",
-                "to": "pH",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "stage_id": "P4 (Dechlorination)",
-        "components": [
-          {
-            "component_id": "T-401",
-            "connections": [
-              {
-                "from": "T-401",
-                "to": "P-401",
-                "via": "pipe"
-              },
-              {
-                "from": "T-401",
-                "to": "P-402",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-401",
-            "connections": [
-              {
-                "from": "P-401",
-                "to": "PIT 401",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-402",
-            "connections": [
-              {
-                "from": "P-402",
-                "to": "PIT 402",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PIT 401",
-            "connections": [
-              {
-                "from": "PIT 401",
-                "to": "Magnetic",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PIT 402",
-            "connections": [
-              {
-                "from": "PIT 402",
-                "to": "Magnetic",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "Magnetic",
-            "connections": [
-              {
-                "from": "Magnetic",
-                "to": "FIT 401",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "FIT 401",
-            "connections": [
-              {
-                "from": "FIT 401",
-                "to": "UV 401",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UV 401",
-            "connections": [
-              {
-                "from": "UV 401",
-                "to": "PIT 403",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PIT 403",
-            "connections": [
-              {
-                "from": "PIT 403",
-                "to": "UV Dechlorinator",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "UV Dechlorinator",
-            "connections": [
-              {
-                "from": "UV Dechlorinator",
-                "to": "FIT 402",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "FIT 402",
-            "connections": [
-              {
-                "from": "FIT 402",
-                "to": "RO FEED",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "RO FEED",
-            "connections": [
-              {
-                "from": "RO FEED",
-                "to": "Static Mixer",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "Static Mixer",
-            "connections": [
-              {
-                "from": "Static Mixer",
-                "to": "To RO",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "T-402",
-            "connections": [
-              {
-                "from": "T-402",
-                "to": "LT 401",
-                "via": "pipe"
-              },
-              {
-                "from": "T-402",
-                "to": "P-403A P-403B",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-403A P-403B",
-            "connections": [
-              {
-                "from": "P-403A P-403B",
-                "to": "FIT 403",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "FIT 403",
-            "connections": [
-              {
-                "from": "FIT 403",
-                "to": "Static Mixer",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "stages": [
-      {
-        "stage_id": "P5 (RO)",
-        "components": [
-          {
-            "component_id": "A (Raw Water)",
-            "connections": [
-              {
-                "from": "A (Raw Water)",
-                "to": "B (Cartridge Filter)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "B (Cartridge Filter)",
-            "connections": [
-              {
-                "from": "B (Cartridge Filter)",
-                "to": "C (RO Feed Pump 1)",
-                "via": "pipe (RO FEED)"
-              },
-              {
-                "from": "B (Cartridge Filter)",
-                "to": "D (RO Feed Pump 2)",
-                "via": "pipe (RO FEED)"
-              }
-            ]
-          },
-          {
-            "component_id": "C (RO Feed Pump 1)",
-            "connections": [
-              {
-                "from": "C (RO Feed Pump 1)",
-                "to": "E (RO 5101)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "D (RO Feed Pump 2)",
-            "connections": [
-              {
-                "from": "D (RO Feed Pump 2)",
-                "to": "E (RO 5101)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "E (RO 5101)",
-            "connections": [
-              {
-                "from": "E (RO 5101)",
-                "to": "F (RO PERMEATE CONCENTRATE)",
-                "via": "pipe"
-              },
-              {
-                "from": "E (RO 5101)",
-                "to": "I (RO RECIRCULATION)",
-                "via": "pipe"
-              },
-              {
-                "from": "E (RO 5101)",
-                "to": "K (RO PERMEATE REJECT)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "F (RO PERMEATE CONCENTRATE)",
-            "connections": [
-              {
-                "from": "F (RO PERMEATE CONCENTRATE)",
-                "to": "G (RO 1st STAGE PERMEATE)",
-                "via": "pipe"
-              },
-              {
-                "from": "F (RO PERMEATE CONCENTRATE)",
-                "to": "H (RO 2nd STAGE PERMEATE)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "G (RO 1st STAGE PERMEATE)",
-            "connections": [
-              {
-                "from": "G (RO 1st STAGE PERMEATE)",
-                "to": "M (Product Water)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "H (RO 2nd STAGE PERMEATE)",
-            "connections": [
-              {
-                "from": "H (RO 2nd STAGE PERMEATE)",
-                "to": "M (Product Water)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "I (RO RECIRCULATION)",
-            "connections": [
-              {
-                "from": "I (RO RECIRCULATION)",
-                "to": "J (Recirculation Stream)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "J (Recirculation Stream)",
-            "connections": [
-              {
-                "from": "J (Recirculation Stream)",
-                "to": "B (Cartridge Filter)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "K (RO PERMEATE REJECT)",
-            "connections": [
-              {
-                "from": "K (RO PERMEATE REJECT)",
-                "to": "L (To Drain)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "M (Product Water)",
-            "connections": [
-              {
-                "from": "M (Product Water)",
-                "to": "N (To Service)",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "stages": [
-      {
-        "stage_id": "P6_1 (RO Permeate Module)",
-        "components": [
-          {
-            "component_id": "LAH 601",
-            "connections": [
-              {
-                "from": "From RO System",
-                "to": "LAH 601",
-                "via": "RO PERMEATE"
-              }
-            ]
-          },
-          {
-            "component_id": "LAL 601",
-            "connections": [
-              {
-                "from": "LAH 601",
-                "to": "LAL 601",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "LT 601",
-            "connections": [
-              {
-                "from": "LAL 601",
-                "to": "LT 601",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "T-601 (RO Permeate Tank)",
-            "connections": [
-              {
-                "from": "LT 601",
-                "to": "T-601 (RO Permeate Tank)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PI 601",
-            "connections": [
-              {
-                "from": "T-601 (RO Permeate Tank)",
-                "to": "PI 601",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-601 (RO Permeate Pump)",
-            "connections": [
-              {
-                "from": "PI 601",
-                "to": "P-601 (RO Permeate Pump)",
-                "via": "pipe"
-              },
-              {
-                "from": "P-601 (RO Permeate Pump)",
-                "to": "Raw Water Tank",
-                "via": "RO PERMEATE TRANSFER"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "stage_id": "P6_2 (UF Backwash Module)",
-        "components": [
-          {
-            "component_id": "LAH 602",
-            "connections": [
-              {
-                "from": "From RO Reject",
-                "to": "LAH 602",
-                "via": "RO REJECT"
-              }
-            ]
-          },
-          {
-            "component_id": "LAL 602",
-            "connections": [
-              {
-                "from": "LAH 602",
-                "to": "LAL 602",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "LT 602",
-            "connections": [
-              {
-                "from": "LAL 602",
-                "to": "LT 602",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "T-602 (UF Backwash Tank)",
-            "connections": [
-              {
-                "from": "LT 602",
-                "to": "T-602 (UF Backwash Tank)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PI 602",
-            "connections": [
-              {
-                "from": "T-602 (UF Backwash Tank)",
-                "to": "PI 602",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "P-602 (UF Backwash Pump)",
-            "connections": [
-              {
-                "from": "PI 602",
-                "to": "P-602 (UF Backwash Pump)",
-                "via": "pipe"
-              },
-              {
-                "from": "P-602 (UF Backwash Pump)",
-                "to": "FE 602",
-                "via": "UF BACKWASH"
-              }
-            ]
-          },
-          {
-            "component_id": "FE 602",
-            "connections": [
-              {
-                "from": "FE 602",
-                "to": "UF Backwash",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "stage_id": "P6_3 (RO/UF Cleaning Module)",
-        "components": [
-          {
-            "component_id": "LAH 603",
-            "connections": [
-              {
-                "from": "From Stock Chemical",
-                "to": "LAH 603",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "LAL 603",
-            "connections": [
-              {
-                "from": "From RO System",
-                "to": "LAL 603",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "LT 603",
-            "connections": [
-              {
-                "from": "LAH 603",
-                "to": "LT 603",
-                "via": "pipe"
-              },
-              {
-                "from": "LAL 603",
-                "to": "LT 603",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "T-603 (CIP Tank)",
-            "connections": [
-              {
-                "from": "LT 603",
-                "to": "T-603 (CIP Tank)",
-                "via": "RO PERMEATE"
-              }
-            ]
-          },
-          {
-            "component_id": "P-603 (CIP Pump)",
-            "connections": [
-              {
-                "from": "T-603 (CIP Tank)",
-                "to": "P-603 (CIP Pump)",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PI 603",
-            "connections": [
-              {
-                "from": "P-603 (CIP Pump)",
-                "to": "PI 603",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "Cartridge",
-            "connections": [
-              {
-                "from": "PI 603",
-                "to": "Cartridge",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "PI 604",
-            "connections": [
-              {
-                "from": "Cartridge",
-                "to": "PI 604",
-                "via": "pipe"
-              }
-            ]
-          },
-          {
-            "component_id": "To RO/UF Cleaning",
-            "connections": [
-              {
-                "from": "PI 604",
-                "to": "To RO/UF Cleaning",
-                "via": "RO CIP"
-              }
-            ]
-          },
-          {
-            "component_id": "PI Permeate",
-            "connections": [
-              {
-                "from": "PI 604",
-                "to": "PI Permeate",
-                "via": "pipe"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
-]
+{
+  "stages": [
+    {
+      "stage_id": "P1",
+      "components": [
+        {
+          "component_id": "FIT101",
+          "connections": [
+            "MV101"
+          ]
+        },
+        {
+          "component_id": "MV101",
+          "connections": [
+            "T101"
+          ]
+        },
+        {
+          "component_id": "LIT101",
+          "connections": [
+            "T101"
+          ]
+        },
+        {
+          "component_id": "T101",
+          "connections": [
+            "P101",
+            "P102"
+          ]
+        },
+        {
+          "component_id": "P101",
+          "connections": [
+            "AIT201"
+          ]
+        },
+        {
+          "component_id": "P102",
+          "connections": [
+            "AIT201"
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "P2",
+      "components": [
+        {
+          "component_id": "AIT201",
+          "connections": [
+            "P201",
+            "P202",
+            "P203",
+            "P204",
+            "P205",
+            "P206",
+            "P207",
+            "P208"
+          ]
+        },
+        {
+          "component_id": "AIT202",
+          "connections": [
+            "MV201"
+          ]
+        },
+        {
+          "component_id": "AIT203",
+          "connections": [
+            "MV201"
+          ]
+        },
+        {
+          "component_id": "P201",
+          "connections": [
+            "T201"
+          ]
+        },
+        {
+          "component_id": "P202",
+          "connections": [
+            "T201"
+          ]
+        },
+        {
+          "component_id": "P203",
+          "connections": [
+            "T202"
+          ]
+        },
+        {
+          "component_id": "P204",
+          "connections": [
+            "T202"
+          ]
+        },
+        {
+          "component_id": "P205",
+          "connections": [
+            "T203"
+          ]
+        },
+        {
+          "component_id": "P206",
+          "connections": [
+            "T203"
+          ]
+        },
+        {
+          "component_id": "P207",
+          "connections": [
+            "T203"
+          ]
+        },
+        {
+          "component_id": "P208",
+          "connections": [
+            "T203"
+          ]
+        },
+        {
+          "component_id": "MV201",
+          "connections": [
+            "T301"
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "P3",
+      "components": [
+        {
+          "component_id": "LIT301",
+          "connections": [
+            "T301"
+          ]
+        },
+        {
+          "component_id": "T301",
+          "connections": [
+            "P301",
+            "P302"
+          ]
+        },
+        {
+          "component_id": "P301",
+          "connections": [
+            "FIT301"
+          ]
+        },
+        {
+          "component_id": "P302",
+          "connections": [
+            "FIT301"
+          ]
+        },
+        {
+          "component_id": "FIT301",
+          "connections": [
+            "FI301"
+          ]
+        },
+        {
+          "component_id": "MV301",
+          "connections": [
+            "MV302",
+            "DPSH301",
+            "DPIT301"
+          ]
+        },
+        {
+          "component_id": "MV302",
+          "connections": [
+            "T401"
+          ]
+        },
+        {
+          "component_id": "PSH301",
+          "connections": [
+            "MV303"
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "P4",
+      "components": [
+        {
+          "component_id": "LIT401",
+          "connections": [
+            "T401"
+          ]
+        },
+        {
+          "component_id": "T401",
+          "connections": [
+            "P401",
+            "P402"
+          ]
+        },
+        {
+          "component_id": "P401",
+          "connections": [
+            "AIT401"
+          ]
+        },
+        {
+          "component_id": "P402",
+          "connections": [
+            "AIT401"
+          ]
+        },
+        {
+          "component_id": "AIT401",
+          "connections": [
+            "FIT401"
+          ]
+        },
+        {
+          "component_id": "FIT401",
+          "connections": [
+            "UV401"
+          ]
+        },
+        {
+          "component_id": "UV401",
+          "connections": [
+            "AIT402"
+          ]
+        },
+        {
+          "component_id": "AIT402",
+          "connections": [
+            "P403",
+            "P404",
+            "FIT501"
+          ]
+        },
+        {
+          "component_id": "P403",
+          "connections": [
+            "T402"
+          ]
+        },
+        {
+          "component_id": "P404",
+          "connections": [
+            "T402"
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "P5",
+      "components": [
+        {
+          "component_id": "FIT501",
+          "connections": [
+            "P501",
+            "P502",
+            "FIT504"
+          ]
+        },
+        {
+          "component_id": "P501",
+          "connections": [
+            "PIT501"
+          ]
+        },
+        {
+          "component_id": "P502",
+          "connections": [
+            "PIT501"
+          ]
+        },
+        {
+          "component_id": "PIT501",
+          "connections": [
+            "PSH501"
+          ]
+        },
+        {
+          "component_id": "PSH501",
+          "connections": [
+            "RO501"
+          ]
+        },
+        {
+          "component_id": "PSH501",
+          "connections": [
+            "RO502"
+          ]
+        },
+        {
+          "component_id": "RO501",
+          "connections": [
+            "PIT502",
+            "RO503"
+          ]
+        },
+        {
+          "component_id": "RO502",
+          "connections": [
+            "PIT502",
+            "RO503"
+          ]
+        },
+        {
+          "component_id": "RO503",
+          "connections": [
+            "PIT502",
+            "FIT503"
+          ]
+        },
+        {
+          "component_id": "FIT503",
+          "connections": [
+            "PIT503"
+          ]
+        },
+        {
+          "component_id": "FIT504",
+          "connections": [
+            "MV504",
+            "MV502"
+          ]
+        },
+        {
+          "component_id": "PIT503",
+          "connections": [
+            "MV504",
+            "MV502"
+          ]
+        },
+        {
+          "component_id": "PIT502",
+          "connections": [
+            "AIT504"
+          ]
+        },
+        {
+          "component_id": "AIT504",
+          "connections": [
+            "FIT502"
+          ]
+        },
+        {
+          "component_id": "FIT502",
+          "connections": [
+            "MV-501",
+            "MV503"
+          ]
+        },
+        {
+          "component_id": "MV501",
+          "connections": [
+            "T601",
+            "T603"
+          ]
+        },
+        {
+          "component_id": "MV502",
+          "connections": [
+            "T602"
+          ]
+        }
+      ]
+    },
+    {
+      "stage_id": "P6",
+      "components": [
+        {
+          "component_id": "LS601",
+          "connections": [
+            "T601"
+          ]
+        },
+        {
+          "component_id": "T601",
+          "connections": [
+            "P601"
+          ]
+        },
+        {
+          "component_id": "LS602",
+          "connections": [
+            "T602"
+          ]
+        },
+        {
+          "component_id": "T602",
+          "connections": [
+            "P602"
+          ]
+        },
+        {
+          "component_id": "P602",
+          "connections": [
+            "FIT601"
+          ]
+        },
+        {
+          "component_id": "LS603",
+          "connections": [
+            "T603"
+          ]
+        },
+        {
+          "component_id": "T603",
+          "connections": [
+            "P603"
+          ]
+        },
+        {
+          "component_id": "P603",
+          "connections": [
+            "FI601"
+          ]
+        }
+      ]
+    }
+  ]
+}
