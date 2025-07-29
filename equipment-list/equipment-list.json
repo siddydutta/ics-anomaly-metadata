@@ -19,7 +19,16 @@
             "material": "Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS",
             "quantity": "2",
             "brand_model": "CALPEDA MXH 203",
-            "remarks": "P101/102",
+            "remarks": "P101",
+            "type": "actuator"
+          },
+          {
+            "description": "Raw Water Transfer Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 203",
+            "remarks": "P102",
             "type": "actuator"
           },
           {
@@ -46,7 +55,7 @@
             "material": "PVC",
             "quantity": "Lot",
             "brand_model": "Glynwed",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
@@ -64,7 +73,7 @@
             "material": "PVC",
             "quantity": "1",
             "brand_model": "Prominent DHV-DM PVC",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           }
         ]
@@ -73,26 +82,35 @@
         "stage": "P2",
         "equipments": [
           {
-            "description": "NaCI Tank",
+            "description": "NaCl Tank",
             "design_specification": "Capacity: 250l",
             "material": "PE",
             "quantity": "1",
             "brand_model": "Rotamas CGD 250",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
-            "description": "NaCI Dosing Pump",
+            "description": "NaCl Dosing Pump",
             "design_specification": "Capacity: 50 l/h @ 10 bar",
             "material": "Liquid end: PVDF Diaphragm: PTFE faced",
             "quantity": "2",
             "brand_model": "Prominent Sigma S1Ba",
-            "remarks": "P201/202",
+            "remarks": "P201",
             "type": "actuator"
           },
           {
-            "description": "HCI Tank",
-            "design_specification": "Capacity: 250l Capacity: 25l (9% HCI)",
+            "description": "NaCl Dosing Pump",
+            "design_specification": "Capacity: 50 l/h @ 10 bar",
+            "material": "Liquid end: PVDF Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent Sigma S1Ba",
+            "remarks": "P202",
+            "type": "actuator"
+          },
+          {
+            "description": "HCl Tank",
+            "design_specification": "Capacity: 250l Capacity: 25l (9% HCl)",
             "material": "PE",
             "quantity": "1",
             "brand_model": "Rotamas CGD 250 25L Carboy",
@@ -100,39 +118,66 @@
             "type": "actuator"
           },
           {
-            "description": "HCI Dosing Pump",
+            "description": "HCl Dosing Pump",
             "design_specification": "Capacity: 0.78 l/h @ 08 bar",
             "material": "Liquid end: Plexiglas Diaphragm: PTFE faced",
             "quantity": "2",
             "brand_model": "Prominent GALa1601",
-            "remarks": "P203/204",
+            "remarks": "P203",
             "type": "actuator"
           },
           {
-            "description": "NaOCI Tank",
+            "description": "HCl Dosing Pump",
+            "design_specification": "Capacity: 0.78 l/h @ 08 bar",
+            "material": "Liquid end: Plexiglas Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent GALa1601",
+            "remarks": "P204",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCl Tank",
             "design_specification": "Capacity: 250l",
             "material": "PE",
             "quantity": "1",
             "brand_model": "CGD 250",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
-            "description": "NaOCI Dosing Pump (FAC)",
+            "description": "NaOCl Dosing Pump (FAC)",
             "design_specification": "Capacity: 0.78 l/h @ 8 bar",
             "material": "Liquid end: Plexiglas Diaphragm: PTFE faced",
             "quantity": "2",
             "brand_model": "Prominent GALa1601",
-            "remarks": "P205/206",
+            "remarks": "P205",
             "type": "actuator"
           },
           {
-            "description": "NaOCI Dosing Pump (UF Cleaning)",
+            "description": "NaOCl Dosing Pump (FAC)",
+            "design_specification": "Capacity: 0.78 l/h @ 8 bar",
+            "material": "Liquid end: Plexiglas Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent GALa1601",
+            "remarks": "P206",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCl Dosing Pump (UF Cleaning)",
             "design_specification": "Capacity: 65l/h @ 7 bar",
             "material": "Liquid end: PVDF Diaphragm: PTFE faced",
             "quantity": "2",
             "brand_model": "Prominent Sigma S1Ba",
-            "remarks": "P207/208",
+            "remarks": "P207",
+            "type": "actuator"
+          },
+          {
+            "description": "NaOCl Dosing Pump (UF Cleaning)",
+            "design_specification": "Capacity: 65l/h @ 7 bar",
+            "material": "Liquid end: PVDF Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent Sigma S1Ba",
+            "remarks": "P208",
             "type": "actuator"
           },
           {
@@ -141,7 +186,7 @@
             "material": "PVC",
             "quantity": "1",
             "brand_model": "Omega",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
@@ -168,11 +213,20 @@
             "material": "-",
             "quantity": "1",
             "brand_model": "Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
-            "remarks": "AIT202/203",
+            "remarks": "AIT202",
             "type": "sensor"
           },
           {
-            "description": "NaCI Level Switch",
+            "description": "AIT - pH & ORP",
+            "design_specification": "pH: 0-14 ORP: -800mV to 800mV",
+            "material": "-",
+            "quantity": "1",
+            "brand_model": "Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+            "remarks": "AIT203",
+            "type": "sensor"
+          },
+          {
+            "description": "NaCl Level Switch",
             "design_specification": "Low Alarm",
             "material": "PVC",
             "quantity": "1",
@@ -181,7 +235,7 @@
             "type": "actuator"
           },
           {
-            "description": "HCI Level Switch",
+            "description": "HCl Level Switch",
             "design_specification": "Low Alarm",
             "material": "PVC",
             "quantity": "1",
@@ -190,7 +244,7 @@
             "type": "actuator"
           },
           {
-            "description": "NaOCI Level Switch",
+            "description": "NaOCl Level Switch",
             "design_specification": "Low Alarm",
             "material": "PVC",
             "quantity": "1",
@@ -204,7 +258,7 @@
             "material": "PVC",
             "quantity": "Lot",
             "brand_model": "Glynwed",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
@@ -249,7 +303,16 @@
             "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
             "quantity": "2",
             "brand_model": "CALPEDA MXH 203",
-            "remarks": "P301/302",
+            "remarks": "P301",
+            "type": "actuator"
+          },
+          {
+            "description": "UF Feedwater Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 203",
+            "remarks": "P302",
             "type": "actuator"
           },
           {
@@ -330,7 +393,34 @@
             "material": "PVC",
             "quantity": "4",
             "brand_model": "Burkert EV2650",
-            "remarks": "MV301/2/3/4",
+            "remarks": "MV301",
+            "type": "actuator"
+          },
+          {
+            "description": "Backwash On/Off Valve",
+            "design_specification": "DN 25, Electric Actuated",
+            "material": "PVC",
+            "quantity": "4",
+            "brand_model": "Burkert EV2650",
+            "remarks": "MV302",
+            "type": "actuator"
+          },
+          {
+            "description": "Backwash On/Off Valve",
+            "design_specification": "DN 25, Electric Actuated",
+            "material": "PVC",
+            "quantity": "4",
+            "brand_model": "Burkert EV2650",
+            "remarks": "MV303",
+            "type": "actuator"
+          },
+          {
+            "description": "Backwash On/Off Valve",
+            "design_specification": "DN 25, Electric Actuated",
+            "material": "PVC",
+            "quantity": "4",
+            "brand_model": "Burkert EV2650",
+            "remarks": "MV304",
             "type": "actuator"
           }
         ]
@@ -353,7 +443,16 @@
             "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
             "quantity": "2",
             "brand_model": "CALPEDA MXH 203",
-            "remarks": "P401/402",
+            "remarks": "P401",
+            "type": "actuator"
+          },
+          {
+            "description": "RO Feedwater Pump",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 20m",
+            "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 203",
+            "remarks": "P402",
             "type": "actuator"
           },
           {
@@ -371,7 +470,16 @@
             "material": "Liquid end: Plexiglas, Diaphragm: PTFE faced",
             "quantity": "2",
             "brand_model": "Prominent GALa1601",
-            "remarks": "P403/404",
+            "remarks": "P403",
+            "type": "actuator"
+          },
+          {
+            "description": "NaHSO\u2083 Dosing Pump",
+            "design_specification": "Capacity: 0.78 l/h @ 8 bar",
+            "material": "Liquid end: Plexiglas, Diaphragm: PTFE faced",
+            "quantity": "2",
+            "brand_model": "Prominent GALa1601",
+            "remarks": "P404",
             "type": "actuator"
           },
           {
@@ -434,7 +542,16 @@
             "material": "-",
             "quantity": null,
             "brand_model": "Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
-            "remarks": "AIT501 / 502",
+            "remarks": "AIT501",
+            "type": "sensor"
+          },
+          {
+            "description": "AIT - pH & ORP (RO Feed)",
+            "design_specification": "pH: 0-14 ORP: -800mV to 800mV",
+            "material": "-",
+            "quantity": null,
+            "brand_model": "Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+            "remarks": "AIT502",
             "type": "sensor"
           },
           {
@@ -481,6 +598,24 @@
             "brand_model": "iSOLV SPT 100",
             "remarks": "PIT502",
             "type": "sensor"
+          },
+          {
+            "description": "High Pressure RO Pump With VSD",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 5bar",
+            "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 206",
+            "remarks": "P501",
+            "type": "actuator"
+          },
+          {
+            "description": "High Pressure RO Pump With VSD",
+            "design_specification": "Duty: 2.5 m\u00b3/h @ 5bar",
+            "material": "Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS",
+            "quantity": "2",
+            "brand_model": "CALPEDA MXH 206",
+            "remarks": "P505",
+            "type": "actuator"
           },
           {
             "description": "AIT - Conductivity (RO Feed)",
@@ -538,7 +673,7 @@
             "material": "SS304 Housing",
             "quantity": "1",
             "brand_model": "Graver 4MCI-VB-316L-1.5N-B",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
@@ -574,7 +709,7 @@
             "material": "PE",
             "quantity": "1",
             "brand_model": "CGD 550",
-            "remarks": "",
+            "remarks": null,
             "type": "actuator"
           },
           {
@@ -628,7 +763,16 @@
             "material": "PVC",
             "quantity": "1",
             "brand_model": "FSIV Flowmeter",
-            "remarks": "FI601/2",
+            "remarks": "FI601",
+            "type": "sensor"
+          },
+          {
+            "description": "FI (RO/UF Cleaning)",
+            "design_specification": "Rotameter; 1\"",
+            "material": "PVC",
+            "quantity": "1",
+            "brand_model": "FSIV Flowmeter",
+            "remarks": "FI602",
             "type": "sensor"
           }
         ]
