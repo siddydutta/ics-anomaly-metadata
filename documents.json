@@ -1,0 +1,2762 @@
+[
+  {
+    "id": "cbd2a77e-85b5-4129-810f-845ab3fcab50",
+    "text": "Name: Loss of Control\nDescription: Adversaries may seek to achieve a sustained loss of control or a runaway condition in which operators cannot issue any commands even if the malicious interference has subsided. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay)\n\nThe German Federal Office for Information Security (BSI) reported a targeted attack on a steel mill in its 2014 IT Security Report.(Citation: BSI State of IT Security 2014) These targeted attacks affected industrial operations and resulted in breakdowns of control system components and even entire installations. As a result of these breakdowns, massive impact resulted in damage and unsafe conditions from the uncontrolled shutdown of a blast furnace.\nMitigation: Data Backup, Out-of-Band Communications Channel, Redundancy of Service",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0827",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "fca268c0-ed60-4ae2-81c8-896f31dd192f",
+    "text": "Name: Exploitation of Remote Services\nDescription: Adversaries may exploit a software vulnerability to take advantage of a programming error in a program, service, or within the operating system software or kernel itself to enable remote service abuse. A common goal for post-compromise exploitation of remote services is for initial access into and lateral movement throughout the ICS environment to enable access to targeted systems. (Citation: Enterprise ATT&CK)\n\nICS asset owners and operators have been affected by ransomware (or disruptive malware masquerading as ransomware) migrating from enterprise IT to ICS environments: WannaCry, NotPetya, and BadRabbit. In each of these cases, self-propagating (wormable) malware initially infected IT networks, but through exploit (particularly the SMBv1-targeting MS17-010 vulnerability) spread to industrial networks, producing significant impacts. (Citation: Joe Slowik April 2019)\nDetection: Application Log Content, Network Traffic Content\nMitigation: Application Isolation and Sandboxing, Disable or Remove Feature or Program, Exploit Protection, Network Segmentation, Privileged Account Management, Threat Intelligence Program, Update Software, Vulnerability Scanning",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0866",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "2cfd6969-8381-404f-b6a7-d964162345d9",
+    "text": "Name: Exploitation of Remote Services\nDescription: Adversaries may exploit a software vulnerability to take advantage of a programming error in a program, service, or within the operating system software or kernel itself to enable remote service abuse. A common goal for post-compromise exploitation of remote services is for initial access into and lateral movement throughout the ICS environment to enable access to targeted systems. (Citation: Enterprise ATT&CK)\n\nICS asset owners and operators have been affected by ransomware (or disruptive malware masquerading as ransomware) migrating from enterprise IT to ICS environments: WannaCry, NotPetya, and BadRabbit. In each of these cases, self-propagating (wormable) malware initially infected IT networks, but through exploit (particularly the SMBv1-targeting MS17-010 vulnerability) spread to industrial networks, producing significant impacts. (Citation: Joe Slowik April 2019)\nDetection: Application Log Content, Network Traffic Content\nMitigation: Application Isolation and Sandboxing, Disable or Remove Feature or Program, Exploit Protection, Network Segmentation, Privileged Account Management, Threat Intelligence Program, Update Software, Vulnerability Scanning",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0866",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "ef8d1945-b3f6-46f3-a860-5e4208629ec8",
+    "text": "Name: Modify Program\nDescription: Adversaries may modify or add a program on a controller to affect how it interacts with the physical process, peripheral devices and other hosts on the network. Modification to controller programs can be accomplished using a Program Download in addition to other types of program modification such as online edit and program append. \n\nProgram modification encompasses the addition and modification of instructions and logic contained in Program Organization Units (POU)  (Citation: IEC February 2013) and similar programming elements found on controllers. This can include, for example, adding new functions to a controller, modifying the logic in existing functions and making new calls from one function to another. \n\nSome programs may allow an adversary to interact directly with the native API of the controller to take advantage of obscure features or vulnerabilities.\nDetection: Application Log Content, Software, Network Traffic Content, Device Alarm\nMitigation: Audit, Authorization Enforcement, Code Signing, Human User Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0889",
+      "tactic": "Persistence",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "74d11144-4ef1-464d-986d-47a5712d98d3",
+    "text": "Name: Manipulation of Control\nDescription: Adversaries may manipulate physical process control within the industrial environment. Methods of manipulating control can include changes to set point values, tags, or other parameters. Adversaries may manipulate control systems devices or possibly leverage their own, to communicate with and command physical control processes. The duration of manipulation may be temporary or longer sustained, depending on operator detection.   \n\nMethods of Manipulation of Control include: \n\n* Man-in-the-middle  \n* Spoof command message \n* Changing setpoints  \n\nA Polish student used a remote controller device to interface with the Lodz city tram system in Poland. (Citation: John Bill May 2017) (Citation: Shelley Smith February 2008) (Citation: Bruce Schneier January 2008) Using this remote, the student was able to capture and replay legitimate tram signals. As a consequence, four trams were derailed and twelve people injured due to resulting emergency stops. (Citation: Shelley Smith February 2008) The track controlling commands issued may have also resulted in tram collisions, a further risk to those on board and nearby the areas of impact. (Citation: Bruce Schneier January 2008)\nMitigation: Communication Authenticity, Data Backup, Out-of-Band Communications Channel",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0831",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "71c87ec1-eb66-4f86-b954-0a1d07ffd925",
+    "text": "Name: Remote System Discovery\nDescription: Adversaries may attempt to get a listing of other systems by IP address, hostname, or other logical identifier on a network that may be used for subsequent Lateral Movement or Discovery techniques. Functionality could exist within adversary tools to enable this, but utilities available on the operating system or vendor software could also be used. (Citation: Enterprise ATT&CK January 2018)\nDetection: File Access, Network Traffic Content, Network Traffic Flow, Process Creation\nMitigation: Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0846",
+      "tactic": "Discovery",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "8020f9c8-e2fe-4201-a885-9f2cd82a4943",
+    "text": "Name: Data from Information Repositories\nDescription: Adversaries may target and collect data from information repositories. This can include sensitive data such as specifications, schematics, or diagrams of control system layouts, devices, and processes. Examples of information repositories include reference databases in the process environment, as well as databases in the corporate network that might contain information about the ICS.(Citation: Cybersecurity & Infrastructure Security Agency March 2018)\n\nInformation collected from these systems may provide the adversary with a better understanding of the operational environment, vendors used, processes, or procedures of the ICS.\n\nIn a campaign between 2011 and 2013 against ONG organizations, Chinese state-sponsored actors searched document repositories for specific information such as, system manuals, remote terminal unit (RTU) sites, personnel lists, documents that included the string SCAD*, user credentials, and remote dial-up access information. (Citation: CISA AA21-201A Pipeline Intrusion July 2021)\nDetection: Application Log Content, Logon Session Creation, Network Share Access\nMitigation: Audit, Encrypt Sensitive Information, Privileged Account Management, Restrict File and Directory Permissions, User Account Management, User Training",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0811",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "7c48aa41-0f80-4fd9-bc2e-e390c271fdcb",
+    "text": "Name: Command-Line Interface\nDescription: Adversaries may utilize command-line interfaces (CLIs) to interact with systems and execute commands. CLIs provide a means of interacting with computer systems and are a common feature across many types of platforms and devices within control systems environments. (Citation: Enterprise ATT&CK January 2018) Adversaries may also use CLIs to install and run new software, including malicious tools that may be installed over the course of an operation.\n\nCLIs are typically accessed locally, but can also be exposed via services, such as SSH, Telnet, and RDP.  Commands that are executed in the CLI execute with the current permissions level of the process running the terminal emulator, unless the command specifies a change in permissions context. Many controllers have CLI interfaces for management purposes.\nDetection: Application Log Content, Command Execution, Process Creation\nMitigation: Disable or Remove Feature or Program, Execution Prevention",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0807",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "37fbc946-9a24-4fd5-8c35-5322d067ed28",
+    "text": "Name: Data from Local System\nDescription: Adversaries may target and collect data from local system sources, such as file systems, configuration files, or local databases. This can include sensitive data such as specifications, schematics, or diagrams of control system layouts, devices, and processes.\n\nAdversaries may do this using [Command-Line Interface](https://attack.mitre.org/techniques/T0807) or [Scripting](https://attack.mitre.org/techniques/T0853) techniques to interact with the file system to gather information. Adversaries may also use [Automated Collection](https://attack.mitre.org/techniques/T0802) on the local system. \nDetection: Command Execution, File Access, OS API Execution, Process Creation, Script Execution\nMitigation: Data Loss Prevention, Encrypt Sensitive Information, Restrict File and Directory Permissions, User Training",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0893",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "eb12b76e-4a51-47a6-88f0-6807cc12d94b",
+    "text": "Name: Commonly Used Port\nDescription: Adversaries may communicate over a commonly used port to bypass firewalls or network detection systems and to blend in with normal network activity, to avoid more detailed inspection. They may use the protocol associated with the port, or a completely different protocol. They may use commonly open ports, such as the examples provided below. \n \n * TCP:80 (HTTP) \n * TCP:443 (HTTPS) \n * TCP/UDP:53 (DNS) \n * TCP:1024-4999 (OPC on XP/Win2k3) \n * TCP:49152-65535 (OPC on Vista and later) \n * TCP:23 (TELNET) \n * UDP:161 (SNMP) \n * TCP:502 (MODBUS) \n * TCP:102 (S7comm/ISO-TSAP) \n * TCP:20000 (DNP3) \n * TCP:44818 (Ethernet/IP)\nDetection: Network Traffic Content, Network Traffic Flow\nMitigation: Disable or Remove Feature or Program, Human User Authentication, Network Intrusion Prevention, Network Segmentation",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0885",
+      "tactic": "Command and Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "37012944-9c3c-4c90-b1f4-2077d6678f57",
+    "text": "Name: Connection Proxy\nDescription: Adversaries may use a connection proxy to direct network traffic between systems or act as an intermediary for network communications.\n\nThe definition of a proxy can also be expanded to encompass trust relationships between networks in peer-to-peer, mesh, or trusted connections between networks consisting of hosts or systems that regularly communicate with each other.\n\nThe network may be within a single organization or across multiple organizations with trust relationships. Adversaries could use these types of relationships to manage command and control communications, to reduce the number of simultaneous outbound network connections, to provide resiliency in the face of connection loss, or to ride over existing trusted communications paths between victims to avoid suspicion. (Citation: Enterprise ATT&CK January 2018)\nDetection: Network Traffic Content, Network Traffic Flow\nMitigation: Filter Network Traffic, Network Allowlists, Network Intrusion Prevention, SSL/TLS Inspection",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0884",
+      "tactic": "Command and Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "44049099-f67f-406f-8fc9-8130aa13b6d1",
+    "text": "Name: Change Credential\nDescription: Adversaries may modify software and device credentials to prevent operator and responder access. Depending on the device, the modification or addition of this password could prevent any device configuration actions from being accomplished and may require a factory reset or replacement of hardware. These credentials are often built-in features provided by the device vendors as a means to restrict access to management interfaces.\n\nAn adversary with access to valid or hardcoded credentials could change the credential to prevent future authorized device access. Change Credential may be especially damaging when paired with other techniques such as Modify Program, Data Destruction, or Modify Controller Tasking. In these cases, a device\u2019s configuration may be destroyed or include malicious actions for the process environment, which cannot not be removed through normal device configuration actions. \n\nAdditionally, recovery of the device and original configuration may be difficult depending on the features provided by the device. In some cases, these passwords cannot be removed onsite and may require that the device be sent back to the vendor for additional recovery steps.\n\n\nA chain of incidents occurred in Germany, where adversaries locked operators out of their building automation system (BAS) controllers by enabling a previously unset BCU key. (Citation: German BAS Lockout Dec 2021) \n\nDetection: Network Traffic Content, Device Alarm\nMitigation: Data Backup, Password Policies, Redundancy of Service",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0892",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "bc910604-61ad-4edd-bbe1-42b2bdb53675",
+    "text": "Name: Rootkit\nDescription: Adversaries may deploy rootkits to hide the presence of programs, files, network connections, services, drivers, and other system components. Rootkits are programs that hide the existence of malware by intercepting and modifying operating-system API calls that supply system information. Rootkits or rootkit-enabling functionality may reside at the user or kernel level in the operating system, or lower. (Citation: Enterprise ATT&CK January 2018)   \n\nFirmware rootkits that affect the operating system yield nearly full control of the system. While firmware rootkits are normally developed for the main processing board, they can also be developed for the I/O that is attached to an asset. Compromise of this firmware allows the modification of all of the process variables and functions the module engages in. This may result in commands being disregarded and false information being fed to the main device. By tampering with device processes, an adversary may inhibit its expected response functions and possibly enable [Impact](https://attack.mitre.org/tactics/TA0105).\nDetection: Firmware Modification\nMitigation: Audit, Code Signing",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0851",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "c10e0c16-4009-4640-a120-062dbfd05a98",
+    "text": "Name: Rootkit\nDescription: Adversaries may deploy rootkits to hide the presence of programs, files, network connections, services, drivers, and other system components. Rootkits are programs that hide the existence of malware by intercepting and modifying operating-system API calls that supply system information. Rootkits or rootkit-enabling functionality may reside at the user or kernel level in the operating system, or lower. (Citation: Enterprise ATT&CK January 2018)   \n\nFirmware rootkits that affect the operating system yield nearly full control of the system. While firmware rootkits are normally developed for the main processing board, they can also be developed for the I/O that is attached to an asset. Compromise of this firmware allows the modification of all of the process variables and functions the module engages in. This may result in commands being disregarded and false information being fed to the main device. By tampering with device processes, an adversary may inhibit its expected response functions and possibly enable [Impact](https://attack.mitre.org/tactics/TA0105).\nDetection: Firmware Modification\nMitigation: Audit, Code Signing",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0851",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "5b9cfd4f-bdaf-419a-8c9d-04d43f318624",
+    "text": "Name: Brute Force I/O\nDescription: Adversaries may repetitively or successively change I/O point values to perform an action. Brute Force I/O may be achieved by changing either a range of I/O point values or a single point value repeatedly to manipulate a process function. The adversary's goal and the information they have about the target environment will influence which of the options they choose. In the case of brute forcing a range of point values, the adversary may be able to achieve an impact without targeting a specific point. In the case where a single point is targeted, the adversary may be able to generate instability on the process function associated with that particular point. \n\nAdversaries may use Brute Force I/O to cause failures within various industrial processes. These failures could be the result of wear on equipment or damage to downstream equipment.\nDetection: Application Log Content, Network Traffic Content, Process History/Live Data\nMitigation: Filter Network Traffic, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0806",
+      "tactic": "Impair Process Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "ee6a39b6-66b6-451c-a652-9c31b136cfa1",
+    "text": "Name: Replication Through Removable Media\nDescription: Adversaries may move onto systems, such as those separated from the enterprise network, by copying malware to removable media which is inserted into the control systems environment. The adversary may rely on unknowing trusted third parties, such as suppliers or contractors with access privileges, to introduce the removable media. This technique enables initial access to target devices that never connect to untrusted networks, but are physically accessible.     \n\nOperators of the German nuclear power plant, Gundremmingen, discovered malware on a facility computer not connected to the internet. (Citation: Kernkraftwerk Gundremmingen April 2016) (Citation: Trend Micro April 2016) The malware included Conficker and W32.Ramnit, which were also found on eighteen removable disk drives in the facility. (Citation: Christoph Steitz, Eric Auchard April 2016) (Citation: Catalin Cimpanu April 2016) (Citation: Peter Dockrill April 2016) (Citation: Lee Mathews April 2016) (Citation: Sean Gallagher April 2016) (Citation: Dark Reading Staff April 2016) The plant has since checked for infection and cleaned up more than 1,000 computers. (Citation: BBC April 2016) An ESET researcher commented that internet disconnection does not guarantee system safety from infection or payload execution. (Citation: ESET April 2016)\nDetection: Drive Creation, File Access, File Creation, Process Creation\nMitigation: Disable or Remove Feature or Program, Limit Hardware Installation, Operating System Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0847",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "bf1fa407-f314-42fe-80e1-eca52e5a6a62",
+    "text": "Name: Adversary-in-the-Middle\nDescription: Adversaries with privileged network access may seek to modify network traffic in real time using adversary-in-the-middle (AiTM) attacks. (Citation: Gabriel Sanchez October 2017) This type of attack allows the adversary to intercept traffic to and/or from a particular device on the network. If a AiTM attack is established, then the adversary has the ability to block, log, modify, or inject traffic into the communication stream. There are several ways to accomplish this attack, but some of the most-common are Address Resolution Protocol (ARP) poisoning and the use of a proxy. (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)  \n\nAn AiTM attack may allow an adversary to perform the following attacks:  \n[Block Reporting Message](https://attack.mitre.org/techniques/T0804), [Spoof Reporting Message](https://attack.mitre.org/techniques/T0856), [Modify Parameter](https://attack.mitre.org/techniques/T0836), [Unauthorized Command Message](https://attack.mitre.org/techniques/T0855)\nDetection: Application Log Content, Network Traffic Content, Network Traffic Flow, Process Creation, Service Creation, Windows Registry Key Modification\nMitigation: Audit, Communication Authenticity, Disable or Remove Feature or Program, Network Intrusion Prevention, Network Segmentation, Out-of-Band Communications Channel, Software Process and Device Authentication, Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0830",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "47b97b58-bd99-41ec-8d55-0b18341218e9",
+    "text": "Name: Lateral Tool Transfer\nDescription: Adversaries may transfer tools or other files from one system to another to stage adversary tools or other files over the course of an operation. (Citation: Enterprise ATT&CK) Copying of files may also be performed laterally between internal victim systems to support Lateral Movement with remote Execution using inherent file sharing protocols such as file sharing over SMB to connected network shares. (Citation: Enterprise ATT&CK)\n\nIn control systems environments, malware may use SMB and other file sharing protocols to move laterally through industrial networks.\nDetection: Command Execution, File Creation, File Metadata, Network Share Access, Network Traffic Content, Network Traffic Flow, Process Creation\nMitigation: Network Intrusion Prevention",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0867",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "92176d62-b82c-46dd-8a77-2a5f9c4d783e",
+    "text": "Name: Remote System Information Discovery\nDescription: An adversary may attempt to get detailed information about remote systems and their peripherals, such as make/model, role, and configuration. Adversaries may use information from Remote System Information Discovery to aid in targeting and shaping follow-on behaviors. For example, the system's operational role and model information can dictate whether it is a relevant target for the adversary's operational objectives. In addition, the system's configuration may be used to scope subsequent technique usage. \n\nRequests for system information are typically implemented using automation and management protocols and are often automatically requested by vendor software during normal operation. This information may be used to tailor management actions, such as program download and system or module firmware. An adversary may leverage this same information by issuing calls directly to the system's API.\nDetection: File Access, Network Traffic Content, Network Traffic Flow, Process Creation\nMitigation: Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0888",
+      "tactic": "Discovery",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "36d25cb5-aa56-4780-8177-70751aa8c00e",
+    "text": "Name: Execution through API\nDescription: Adversaries may attempt to leverage Application Program Interfaces (APIs) used for communication between control software and the hardware. Specific functionality is often coded into APIs which can be called by software to engage specific functions on a device or other software.\nDetection: OS API Execution\nMitigation: Access Management, Authorization Enforcement, Execution Prevention, Human User Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0871",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "f1fe000e-944e-4077-ad50-f4ce479a1724",
+    "text": "Name: Loss of Availability\nDescription: Adversaries may attempt to disrupt essential components or systems to prevent owner and operator from delivering products or services. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay) \n\nAdversaries may leverage malware to delete or encrypt critical data on HMIs, workstations, or databases.\n\nIn the 2021 Colonial Pipeline ransomware incident, pipeline operations were temporally halted on May 7th and were not fully restarted until May 12th. (Citation: Colonial Pipeline Company May 2021)\nMitigation: Data Backup, Out-of-Band Communications Channel, Redundancy of Service",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0826",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "c03b5d2f-29db-48de-a9ed-fc2597d7a79f",
+    "text": "Name: Network Connection Enumeration\nDescription: Adversaries may perform network connection enumeration to discover information about device communication patterns. If an adversary can inspect the state of a network connection with tools, such as Netstat(Citation: Netstat), in conjunction with [System Firmware](https://attack.mitre.org/techniques/T0857), then they can determine the role of certain devices on the network  (Citation: MITRE). The adversary can also use [Network Sniffing](https://attack.mitre.org/techniques/T0842) to watch network traffic for details about the source, destination, protocol, and content.\nDetection: Command Execution, OS API Execution, Process Creation, Script Execution\nMitigation: Mitigation Limited or Not Effective",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0840",
+      "tactic": "Discovery",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "5ecd2d22-4d53-4537-b5f0-40ee0af4371f",
+    "text": "Name: Drive-by Compromise\nDescription: Adversaries may gain access to a system during a drive-by compromise, when a user visits a website as part of a regular browsing session. With this technique, the user's web browser is targeted and exploited simply by visiting the compromised website. \n\nThe adversary may target a specific community, such as trusted third party suppliers or other industry specific groups, which often visit the target website. This kind of targeted attack relies on a common interest, and is known as a strategic web compromise or watering hole attack. \n\nThe National Cyber Awareness System (NCAS) has issued a Technical Alert (TA) regarding Russian government cyber activity targeting critical infrastructure sectors. (Citation: Cybersecurity & Infrastructure Security Agency March 2018) Analysis by DHS and FBI has noted two distinct categories of victims in the Dragonfly campaign on the Western energy sector: staging and intended targets. The adversary targeted the less secure networks of staging targets, including trusted third-party suppliers and related peripheral organizations. Initial access to the intended targets used watering hole attacks to target process control, ICS, and critical infrastructure related trade publications and informational websites.\nDetection: Application Log Content, File Creation, Network Connection Creation, Network Traffic Content, Process Creation\nMitigation: Application Isolation and Sandboxing, Exploit Protection, Restrict Web-Based Content, Update Software",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0817",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "c935956a-3ac7-4436-bf21-f972b026e536",
+    "text": "Name: Monitor Process State\nDescription: Adversaries may gather information about the physical process state. This information may be used to gain more information about the process itself or used as a trigger for malicious actions. The sources of process state information may vary such as, OPC tags, historian data, specific PLC block information, or network traffic.\nDetection: Application Log Content, Network Traffic Content\nMitigation: Mitigation Limited or Not Effective",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0801",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "96b08cf5-6128-456d-8a5c-918679bc31e1",
+    "text": "Name: Spoof Reporting Message\nDescription: Adversaries may spoof reporting messages in control system environments for evasion and to impair process control. In control systems, reporting messages contain telemetry data (e.g., I/O values) pertaining to the current state of equipment and the industrial process. Reporting messages are important for monitoring the normal operation of a system or identifying important events such as deviations from expected values. \n\nIf an adversary has the ability to Spoof Reporting Messages, they can impact the control system in many ways. The adversary can Spoof Reporting Messages that state that the process is operating normally, as a form of evasion. The adversary could also Spoof Reporting Messages to make the defenders and operators think that other errors are occurring in order to distract them from the actual source of a problem. (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011) \nDetection: Network Traffic Content, Network Traffic Flow, Device Alarm, Windows Registry Key Modification\nMitigation: Communication Authenticity, Filter Network Traffic, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0856",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "253766d0-0754-41e3-a832-b6b86311cdf7",
+    "text": "Name: Spoof Reporting Message\nDescription: Adversaries may spoof reporting messages in control system environments for evasion and to impair process control. In control systems, reporting messages contain telemetry data (e.g., I/O values) pertaining to the current state of equipment and the industrial process. Reporting messages are important for monitoring the normal operation of a system or identifying important events such as deviations from expected values. \n\nIf an adversary has the ability to Spoof Reporting Messages, they can impact the control system in many ways. The adversary can Spoof Reporting Messages that state that the process is operating normally, as a form of evasion. The adversary could also Spoof Reporting Messages to make the defenders and operators think that other errors are occurring in order to distract them from the actual source of a problem. (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011) \nDetection: Network Traffic Content, Network Traffic Flow, Device Alarm, Windows Registry Key Modification\nMitigation: Communication Authenticity, Filter Network Traffic, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0856",
+      "tactic": "Impair Process Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "3d2b3ca1-5e4a-4f70-bd62-3394cc7dd34f",
+    "text": "Name: Autorun Image\nDescription: Adversaries may leverage AutoRun functionality or scripts to execute malicious code. Devices configured to enable AutoRun functionality or legacy operating systems may be susceptible to abuse of these features to run malicious code stored on various forms of removeable media (i.e., USB, Disk Images [.ISO]). Commonly, AutoRun or AutoPlay are disabled in many operating systems configurations to mitigate against this technique. If a device is configured to enable AutoRun or AutoPlay, adversaries may execute code on the device by mounting the removable media to the device, either through physical or virtual means. This may be especially relevant for virtual machine environments where disk images may be dynamically mapped to a guest system on a hypervisor.  \n\nAn example could include an adversary gaining access to a hypervisor through the management interface to modify a virtual machine\u2019s hardware configuration. They could then deploy an iso image with a malicious AutoRun script to cause the virtual machine to automatically execute the code contained on the disk image. This would enable the execution of malicious code within a virtual machine without needing any prior remote access to that system.\n\nDetection: Drive Creation, Process Creation\nMitigation: Operating System Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0895",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "570b9924-564f-4d08-ab33-4700aa419a0d",
+    "text": "Name: Internet Accessible Device\nDescription: Adversaries may gain access into industrial environments through systems exposed directly to the internet for remote access rather than through [External Remote Services](https://attack.mitre.org/techniques/T0822). Internet Accessible Devices are exposed to the internet unintentionally or intentionally without adequate protections. This may allow for adversaries to move directly into the control system network. Access onto these devices is accomplished without the use of exploits, these would be represented within the [Exploit Public-Facing Application](https://attack.mitre.org/techniques/T0819) technique.\n\nAdversaries may leverage built in functions for remote access which may not be protected or utilize minimal legacy protections that may be targeted. (Citation: NCCIC January 2014) These services may be discoverable through the use of online scanning tools. \n\nIn the case of the Bowman dam incident, adversaries leveraged access to the dam control network through a cellular modem. Access to the device was protected by password authentication, although the application was vulnerable to brute forcing. (Citation: NCCIC January 2014) (Citation: Danny Yadron December 2015) (Citation: Mark Thompson March 2016)\n\nIn Trend Micros manufacturing deception operations adversaries were detected leveraging direct internet access to an ICS environment through the exposure of operational protocols such as Siemens S7, Omron FINS, and EtherNet/IP, in addition to misconfigured VNC access. (Citation: Stephen Hilt, Federico Maggi, Charles Perine, Lord Remorin, Martin Rsler, and Rainer Vosseler)\nDetection: Logon Session Metadata, Network Traffic Content, Network Traffic Flow\nMitigation: Network Segmentation",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0883",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "67883e34-504d-42ac-ad1f-b1e017bbc2aa",
+    "text": "Name: Modify Controller Tasking\nDescription: Adversaries may modify the tasking of a controller to allow for the execution of their own programs. This can allow an adversary to manipulate the execution flow and behavior of a controller. \n\nAccording to 61131-3, the association of a Task with a Program Organization Unit (POU) defines a task association. (Citation: IEC February 2013) An adversary may modify these associations or create new ones to manipulate the execution flow of a controller. Modification of controller tasking can be accomplished using a Program Download in addition to other types of program modification such as online edit and program append.\n\nTasks have properties, such as interval, frequency and priority to meet the requirements of program execution. Some controller vendors implement tasks with implicit, pre-defined properties whereas others allow for these properties to be formulated explicitly. An adversary may associate their program with tasks that have a higher priority or execute associated programs more frequently. For instance, to ensure cyclic execution of their program on a Siemens controller, an adversary may add their program to the task, Organization Block 1 (OB1).\nDetection: Application Log Content, Software, Device Alarm\nMitigation: Audit, Authorization Enforcement, Code Signing, Human User Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0821",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "d5ee88b5-8e32-4b65-bba4-ea64108c3aec",
+    "text": "Name: Wireless Compromise\nDescription: Adversaries may perform wireless compromise as a method of gaining communications and unauthorized access to a wireless network. Access to a wireless network may be gained through the compromise of a wireless device. (Citation: Alexander Bolshev, Gleb Cherbov July 2014) (Citation: Alexander Bolshev March 2014) Adversaries may also utilize radios and other wireless communication devices on the same frequency as the wireless network. Wireless compromise can be done as an initial access vector from a remote distance. \n\nA Polish student used a modified TV remote controller to gain access to and control over the Lodz city tram system in Poland. (Citation: John Bill May 2017) (Citation: Shelley Smith February 2008) The remote controller device allowed the student to interface with the trams network to modify track settings and override operator control. The adversary may have accomplished this by aligning the controller to the frequency and amplitude of IR control protocol signals. (Citation: Bruce Schneier January 2008) The controller then enabled initial access to the network, allowing the capture and replay of tram signals. (Citation: John Bill May 2017)\nDetection: Application Log Content, Logon Session Creation, Network Traffic Flow\nMitigation: Communication Authenticity, Encrypt Network Traffic, Minimize Wireless Signal Propagation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0860",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "fec6bc86-5600-486d-bad4-4c1acd4bb451",
+    "text": "Name: Loss of Protection\nDescription: Adversaries may compromise protective system functions designed to prevent the effects of faults and abnormal conditions. This can result in equipment damage, prolonged process disruptions and hazards to personnel. \n\nMany faults and abnormal conditions in process control happen too quickly for a human operator to react to. Speed is critical in correcting these conditions to limit serious impacts such as Loss of Control and Property Damage. \n\nAdversaries may target and disable protective system functions as a prerequisite to subsequent attack execution or to allow for future faults and abnormal conditions to go unchecked. Detection of a Loss of Protection by operators can result in the shutdown of a process due to strict policies regarding protection systems. This can cause a Loss of Productivity and Revenue and may meet the technical goals of adversaries seeking to cause process disruptions.",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0837",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "f3afafab-ac3e-4b68-a5e4-99c53aa01f42",
+    "text": "Name: Modify Parameter\nDescription: Adversaries may modify parameters used to instruct industrial control system devices. These devices operate via programs that dictate how and when to perform actions based on such parameters. Such parameters can determine the extent to which an action is performed and may specify additional options. For example, a program on a control system device dictating motor processes may take a parameter defining the total number of seconds to run that motor.      \n\nAn adversary can potentially modify these parameters to produce an outcome outside of what was intended by the operators. By modifying system and process critical parameters, the adversary may cause [Impact](https://attack.mitre.org/tactics/TA0105) to equipment and/or control processes. Modified parameters may be turned into dangerous, out-of-bounds, or unexpected values from typical operations. For example, specifying that a process run for more or less time than it should, or dictating an unusually high, low, or invalid value as a parameter.\nDetection: Application Log Content, Asset Inventory, Network Traffic Content, Device Alarm\nMitigation: Audit, Authorization Enforcement, Human User Authentication, Validate Program Inputs",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0836",
+      "tactic": "Impair Process Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "6bc80242-c607-4aa9-b461-f93d3ca5af11",
+    "text": "Name: Point & Tag Identification\nDescription: Adversaries may collect point and tag values to gain a more comprehensive understanding of the process environment. Points may be values such as inputs, memory locations, outputs or other process specific variables. (Citation: Dennis L. Sloatman September 2016) Tags are the identifiers given to points for operator convenience. \n\nCollecting such tags provides valuable context to environmental points and enables an adversary to map inputs, outputs, and other values to their control processes. Understanding the points being collected may inform an adversary on which processes and values to keep track of over the course of an operation.\nDetection: Application Log Content, Network Traffic Content\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0861",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "b25a0532-113a-4bc9-8746-1bc6b519cb60",
+    "text": "Name: I/O Image\nDescription: Adversaries may seek to capture process values related to the inputs and outputs of a PLC. During the scan cycle, a PLC reads the status of all inputs and stores them in an image table. (Citation: Nanjundaiah, Vaidyanath) The image table is the PLCs internal storage location where values of inputs/outputs for one scan are stored while it executes the user program. After the PLC has solved the entire logic program, it updates the output image table. The contents of this output image table are written to the corresponding output points in I/O Modules.\n\nThe Input and Output Image tables described above make up the I/O Image on a PLC. This image is used by the user program instead of directly interacting with physical I/O. (Citation: Spenneberg, Ralf 2016) \n\nAdversaries may collect the I/O Image state of a PLC by utilizing a devices [Native API](https://attack.mitre.org/techniques/T0834) to access the memory regions directly. The collection of the PLCs I/O state could be used to replace values or inform future stages of an attack.\nDetection: Software\nMitigation: Mitigation Limited or Not Effective",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0877",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "70a66706-e192-4102-9c5c-218ed0e981ef",
+    "text": "Name: Exploitation for Evasion\nDescription: Adversaries may exploit a software vulnerability to take advantage of a programming error in a program, service, or within the operating system software or kernel itself to evade detection. Vulnerabilities may exist in software that can be used to disable or circumvent security features.  \n\nAdversaries may have prior knowledge through [Remote System Information Discovery](https://attack.mitre.org/techniques/T0888) about security features implemented on control devices. These device security features will likely be targeted directly for exploitation. There are examples of firmware RAM/ROM consistency checks on control devices being targeted by adversaries to enable the installation of malicious [System Firmware](https://attack.mitre.org/techniques/T0857).\nDetection: Application Log Content\nMitigation: Application Isolation and Sandboxing, Exploit Protection, Threat Intelligence Program, Update Software",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0820",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "05367165-172c-43d2-b9e6-41016e8163fe",
+    "text": "Name: Theft of Operational Information\nDescription: Adversaries may steal operational information on a production environment as a direct mission outcome for personal gain or to inform future operations. This information may include design documents, schedules, rotational data, or similar artifacts that provide insight on operations.    In the Bowman Dam incident, adversaries probed systems for operational data. (Citation: Mark Thompson March 2016) (Citation: Danny Yadron December 2015)\nMitigation: Data Loss Prevention, Encrypt Sensitive Information, Operational Information Confidentiality, Restrict File and Directory Permissions",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0882",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "90c717ce-f40b-41fd-8401-bd533023bde1",
+    "text": "Name: System Binary Proxy Execution\nDescription: Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries. Binaries used in this technique are often Microsoft-signed files, indicating that they have been either downloaded from Microsoft or are already native in the operating system. (Citation: LOLBAS Project) Binaries signed with trusted digital certificates can typically execute on Windows systems protected by digital signature validation. Several Microsoft signed binaries that are default on Windows installations can be used to proxy execution of other files or commands. Similarly, on Linux systems adversaries may abuse trusted binaries such as split to proxy execution of malicious commands. (Citation: split man page)(Citation: GTFO split)\n\nAdversaries may abuse application binaries installed on a system for proxy execution of malicious code or domain-specific commands. These commands could be used to target local resources on the device or networked devices within the environment through defined APIs ([Execution through API](https://attack.mitre.org/techniques/T0871)) or application-specific programming languages (e.g., MicroSCADA SCIL). Application binaries may be signed by the developer or generally trusted by the operators, analysts, and monitoring tools accustomed to the environment. These applications may be developed and/or directly provided by the device vendor to enable configuration, management, and operation of their devices without many alternatives. \n\nAdversaries may seek to target these trusted application binaries to execute or send commands without the development of custom malware. For example, adversaries may target a SCADA server binary which has the existing ability to send commands to substation devices, such as through IEC 104 command messages. Proxy execution may still require the development of custom tools to hook into the application binary\u2019s execution.\n\n\nDetection: Command Execution, Process Creation, Script Execution\nMitigation: Execution Prevention",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0894",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "7bfa799b-916c-456b-85e0-dcf7c8c55519",
+    "text": "Name: System Firmware\nDescription: System firmware on modern assets is often designed with an update feature. Older device firmware may be factory installed and require special reprograming equipment. When available, the firmware update feature enables vendors to remotely patch bugs and perform upgrades. Device firmware updates are often delegated to the user and may be done using a software update package. It may also be possible to perform this task over the network. \n\nAn adversary may exploit the firmware update feature on accessible devices to upload malicious or out-of-date firmware. Malicious modification of device firmware may provide an adversary with root access to a device, given firmware is one of the lowest programming abstraction layers. (Citation: Basnight, Zachry, et al.)\nDetection: Application Log Content, Firmware Modification, Network Traffic Content, Device Alarm\nMitigation: Access Management, Audit, Boot Integrity, Code Signing, Communication Authenticity, Encrypt Network Traffic, Encrypt Sensitive Information, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication, Update Software",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0857",
+      "tactic": "Persistence",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "8ea7c999-2586-4d19-b9a5-0d5581183d64",
+    "text": "Name: System Firmware\nDescription: System firmware on modern assets is often designed with an update feature. Older device firmware may be factory installed and require special reprograming equipment. When available, the firmware update feature enables vendors to remotely patch bugs and perform upgrades. Device firmware updates are often delegated to the user and may be done using a software update package. It may also be possible to perform this task over the network. \n\nAn adversary may exploit the firmware update feature on accessible devices to upload malicious or out-of-date firmware. Malicious modification of device firmware may provide an adversary with root access to a device, given firmware is one of the lowest programming abstraction layers. (Citation: Basnight, Zachry, et al.)\nDetection: Application Log Content, Firmware Modification, Network Traffic Content, Device Alarm\nMitigation: Access Management, Audit, Boot Integrity, Code Signing, Communication Authenticity, Encrypt Network Traffic, Encrypt Sensitive Information, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication, Update Software",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0857",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "ce7bb1d1-147c-447f-9a7f-0bb6422716e2",
+    "text": "Name: Activate Firmware Update Mode\nDescription: Adversaries may activate firmware update mode on devices to prevent expected response functions from engaging in reaction to an emergency or process malfunction. For example, devices such as protection relays may have an operation mode designed for firmware installation. This mode may halt process monitoring and related functions to allow new firmware to be loaded. A device left in update mode may be placed in an inactive holding state if no firmware is provided to it. By entering and leaving a device in this mode, the adversary may deny its usual functionalities.\nDetection: Application Log Content, Network Traffic Content, Device Alarm\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0800",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "0f195f69-5244-4892-b307-a2042c54cda5",
+    "text": "Name: Device Restart/Shutdown\nDescription: Adversaries may forcibly restart or shutdown a device in an ICS environment to disrupt and potentially negatively impact physical processes. Methods of device restart and shutdown exist in some devices as built-in, standard functionalities. These functionalities can be executed using interactive device web interfaces, CLIs, and network protocol commands.\n\nUnexpected restart or shutdown of control system devices may prevent expected response functions happening during critical states.\n\nA device restart can also be a sign of malicious device modifications, as many updates require a shutdown in order to take effect.\nDetection: Application Log Content, Network Traffic Content, Network Traffic Flow, Device Alarm\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Disable or Remove Feature or Program, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0816",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "86965aad-b55f-41ba-946c-d0abc442a0a1",
+    "text": "Name: Module Firmware\nDescription: Adversaries may install malicious or vulnerable firmware onto modular hardware devices. Control system devices often contain modular hardware devices. These devices may have their own set of firmware that is separate from the firmware of the main control system equipment.   \n\nThis technique is similar to [System Firmware](https://attack.mitre.org/techniques/T0857), but is conducted on other system components that may not have the same capabilities or level of integrity checking. Although it results in a device re-image, malicious device firmware may provide persistent access to remaining devices. (Citation: Daniel Peck,  Dale Peterson January 2009)  \n\nAn easy point of access for an adversary is the Ethernet card, which may have its own CPU, RAM, and operating system. The adversary may attack and likely exploit the computer on an Ethernet card. Exploitation of the Ethernet card computer may enable the adversary to accomplish additional attacks, such as the following: (Citation: Daniel Peck,  Dale Peterson January 2009)  \n\n* Delayed Attack - The adversary may stage an attack in advance and choose when to launch it, such as at a particularly damaging time.  \n* Brick the Ethernet Card - Malicious firmware may be programmed to result in an Ethernet card failure, requiring a factory return.  \n* Random Attack or Failure - The adversary may load malicious firmware onto multiple field devices. Execution of an attack and the time it occurs is generated by a pseudo-random number generator.   \n* A Field Device Worm - The adversary may choose to identify all field devices of the same model, with the end goal of performing a device-wide compromise.  \n* Attack Other Cards on the Field Device - Although it is not the most important module in a field device, the Ethernet card is most accessible to the adversary and malware. Compromise of the Ethernet card may provide a more direct route to compromising other modules, such as the CPU module.\nDetection: Application Log Content, Firmware Modification, Network Traffic Content, Device Alarm\nMitigation: Access Management, Audit, Boot Integrity, Code Signing, Communication Authenticity, Encrypt Network Traffic, Encrypt Sensitive Information, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0839",
+      "tactic": "Persistence",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "2abe5a7e-d34e-423e-9a27-e2f9e3d12c22",
+    "text": "Name: Module Firmware\nDescription: Adversaries may install malicious or vulnerable firmware onto modular hardware devices. Control system devices often contain modular hardware devices. These devices may have their own set of firmware that is separate from the firmware of the main control system equipment.   \n\nThis technique is similar to [System Firmware](https://attack.mitre.org/techniques/T0857), but is conducted on other system components that may not have the same capabilities or level of integrity checking. Although it results in a device re-image, malicious device firmware may provide persistent access to remaining devices. (Citation: Daniel Peck,  Dale Peterson January 2009)  \n\nAn easy point of access for an adversary is the Ethernet card, which may have its own CPU, RAM, and operating system. The adversary may attack and likely exploit the computer on an Ethernet card. Exploitation of the Ethernet card computer may enable the adversary to accomplish additional attacks, such as the following: (Citation: Daniel Peck,  Dale Peterson January 2009)  \n\n* Delayed Attack - The adversary may stage an attack in advance and choose when to launch it, such as at a particularly damaging time.  \n* Brick the Ethernet Card - Malicious firmware may be programmed to result in an Ethernet card failure, requiring a factory return.  \n* Random Attack or Failure - The adversary may load malicious firmware onto multiple field devices. Execution of an attack and the time it occurs is generated by a pseudo-random number generator.   \n* A Field Device Worm - The adversary may choose to identify all field devices of the same model, with the end goal of performing a device-wide compromise.  \n* Attack Other Cards on the Field Device - Although it is not the most important module in a field device, the Ethernet card is most accessible to the adversary and malware. Compromise of the Ethernet card may provide a more direct route to compromising other modules, such as the CPU module.\nDetection: Application Log Content, Firmware Modification, Network Traffic Content, Device Alarm\nMitigation: Access Management, Audit, Boot Integrity, Code Signing, Communication Authenticity, Encrypt Network Traffic, Encrypt Sensitive Information, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0839",
+      "tactic": "Impair Process Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "e55dd978-e184-4f6a-9cc3-10b681f5ab2f",
+    "text": "Name: Service Stop\nDescription: Adversaries may stop or disable services on a system to render those services unavailable to legitimate users. Stopping critical services can inhibit or stop response to an incident or aid in the adversary's overall objectives to cause damage to the environment. (Citation: Enterprise ATT&CK)  Services may not allow for modification of their data stores while running. Adversaries may stop services in order to conduct Data Destruction. (Citation: Enterprise ATT&CK)\nDetection: Command Execution, File Modification, OS API Execution, Process Creation, Process Termination, Service Metadata, Windows Registry Key Modification\nMitigation: Network Segmentation, Restrict File and Directory Permissions, Restrict Registry Permissions, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0881",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "fdf8d6c9-0c01-4880-8204-38cf007cfa42",
+    "text": "Name: Alarm Suppression\nDescription: Adversaries may target protection function alarms to prevent them from notifying operators of critical conditions. Alarm messages may be a part of an overall reporting system and of particular interest for adversaries. Disruption of the alarm system does not imply the disruption of the reporting system as a whole.\n\nA Secura presentation on targeting OT notes a dual fold goal for adversaries attempting alarm suppression: prevent outgoing alarms from being raised and prevent incoming alarms from being responded to. (Citation: Jos Wetzels, Marina Krotofil 2019) The method of suppression may greatly depend on the type of alarm in question:  \n\n* An alarm raised by a protocol message \n* An alarm signaled with I/O \n* An alarm bit set in a flag (and read) \n\nIn ICS environments, the adversary may have to suppress or contend with multiple alarms and/or alarm propagation to achieve a specific goal to evade detection or prevent intended responses from occurring. (Citation: Jos Wetzels, Marina Krotofil 2019)  Methods of suppression may involve tampering or altering device displays and logs, modifying in memory code to fixed values, or even tampering with assembly level instruction code.\nDetection: Network Traffic Flow, Device Alarm, Process History/Live Data, Process/Event Alarm\nMitigation: Network Allowlists, Network Segmentation, Out-of-Band Communications Channel, Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0878",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "b3bc11b8-3835-42b0-a107-cb7330c76aff",
+    "text": "Name: Block Command Message\nDescription: Adversaries may block a command message from reaching its intended target to prevent command execution. In OT networks, command messages are sent to provide instructions to control system devices. A blocked command message can inhibit response functions from correcting a disruption or unsafe condition. (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)  (Citation: Electricity Information Sharing and Analysis Center; SANS Industrial Control Systems March 2016)\nDetection: Application Log Content, Network Traffic Flow, Process History/Live Data, Process/Event Alarm, Process Termination\nMitigation: Network Allowlists, Out-of-Band Communications Channel, Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0803",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "fe5c591d-19f6-4420-825b-c6404af7189e",
+    "text": "Name: Denial of View\nDescription: Adversaries may cause a denial of view in attempt to disrupt and prevent operator oversight on the status of an ICS environment. This may manifest itself as a temporary communication failure between a device and its control source, where the interface recovers and becomes available once the interference ceases. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay) \n\nAn adversary may attempt to deny operator visibility by preventing them from receiving status and reporting messages. Denying this view may temporarily block and prevent operators from noticing a change in state or anomalous behavior. The environment's data and processes may still be operational, but functioning in an unintended or adversarial manner. \nMitigation: Data Backup, Out-of-Band Communications Channel, Redundancy of Service",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0815",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "69e7de85-6bf7-4e84-85c8-4830ea91ec52",
+    "text": "Name: Network Sniffing\nDescription: Network sniffing is the practice of using a network interface on a computer system to monitor or capture information (Citation: Enterprise ATT&CK January 2018) regardless of whether it is the specified destination for the information. \n\nAn adversary may attempt to sniff the traffic to gain information about the target. This information can vary in the level of importance. Relatively unimportant information is general communications to and from machines.  Relatively important information would be login information. User credentials may be sent over an unencrypted protocol, such as Telnet, that can be captured and obtained through network packet analysis. \n\nIn addition, ARP and Domain Name Service (DNS) poisoning can be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.\nDetection: Command Execution, Process Creation\nMitigation: Encrypt Network Traffic, Multi-factor Authentication, Network Segmentation, Privileged Account Management, Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0842",
+      "tactic": "Discovery",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "566fa653-5fe6-4067-85bd-2af973505a66",
+    "text": "Name: Manipulate I/O Image\nDescription: Adversaries may manipulate the I/O image of PLCs through various means to prevent them from functioning as expected. Methods of I/O image manipulation may include overriding the I/O table via direct memory manipulation or using the override function used for testing PLC programs. (Citation: Dr. Kelvin T. Erickson December 2010) During the scan cycle, a PLC reads the status of all inputs and stores them in an image table. (Citation: Nanjundaiah, Vaidyanath) The image table is the PLCs internal storage location where values of inputs/outputs for one scan are stored while it executes the user program. After the PLC has solved the entire logic program, it updates the output image table. The contents of this output image table are written to the corresponding output points in I/O Modules. \n\nOne of the unique characteristics of PLCs is their ability to override the status of a physical discrete input or to override the logic driving a physical output coil and force the output to a desired status.\nDetection: Software\nMitigation: Mitigation Limited or Not Effective",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0835",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "26c64706-dd2e-4246-9c1e-611e3208593f",
+    "text": "Name: Supply Chain Compromise\nDescription: Adversaries may perform supply chain compromise to gain control systems environment access by means of infected products, software, and workflows. Supply chain compromise is the manipulation of products, such as devices or software, or their delivery mechanisms before receipt by the end consumer. Adversary compromise of these products and mechanisms is done for the goal of data or system compromise, once infected products are introduced to the target environment. \n\nSupply chain compromise can occur at all stages of the supply chain, from manipulation of development tools and environments to manipulation of developed products and tools distribution mechanisms. This may involve the compromise and replacement of legitimate software and patches, such as on third party or vendor websites. Targeting of supply chain compromise can be done in attempts to infiltrate the environments of a specific audience. In control systems environments with assets in both the IT and OT networks, it is possible a supply chain compromise affecting the IT environment could enable further access to the OT environment.   \n\nCounterfeit devices may be introduced to the global supply chain posing safety and cyber risks to asset owners and operators. These devices may not meet the safety, engineering and manufacturing requirements of regulatory bodies but may feature tagging indicating conformance with industry standards. Due to the lack of adherence to standards and overall lesser quality, the counterfeit products may pose a serious safety and operational risk. (Citation: Control Global May 2019) \n\nYokogawa identified instances in which their customers received counterfeit differential pressure transmitters using the Yokogawa logo. The counterfeit transmitters were nearly indistinguishable with a semblance of functionality and interface that mimics the genuine product. (Citation: Control Global May 2019) \n\nF-Secure Labs analyzed the approach the adversary used to compromise victim systems with Havex. (Citation: Daavid Hentunen, Antti Tikkanen June 2014) The adversary planted trojanized software installers available on legitimate ICS/SCADA vendor websites. After being downloaded, this software infected the host computer with a Remote Access Trojan (RAT).\nDetection: File Metadata\nMitigation: Audit, Code Signing, Supply Chain Management, Update Software, Vulnerability Scanning",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0862",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "9ce5f7c2-8dca-4da4-8991-70fd25ce4550",
+    "text": "Name: Hooking\nDescription: Adversaries may hook into application programming interface (API) functions used by processes to redirect calls for execution and privilege escalation means. Windows processes often leverage these API functions to perform tasks that require reusable system resources. Windows API functions are typically stored in dynamic-link libraries (DLLs) as exported functions. (Citation: Enterprise ATT&CK)\n\nOne type of hooking seen in ICS involves redirecting calls to these functions via import address table (IAT) hooking. IAT hooking uses modifications to a process IAT, where pointers to imported API functions are stored. (Citation: Nicolas Falliere, Liam O Murchu, Eric Chien February 2011)\nDetection: OS API Execution, Process Metadata\nMitigation: Audit, Restrict Library Loading",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0874",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "e0e54466-9887-4841-8343-74dcf4f49fa8",
+    "text": "Name: Hooking\nDescription: Adversaries may hook into application programming interface (API) functions used by processes to redirect calls for execution and privilege escalation means. Windows processes often leverage these API functions to perform tasks that require reusable system resources. Windows API functions are typically stored in dynamic-link libraries (DLLs) as exported functions. (Citation: Enterprise ATT&CK)\n\nOne type of hooking seen in ICS involves redirecting calls to these functions via import address table (IAT) hooking. IAT hooking uses modifications to a process IAT, where pointers to imported API functions are stored. (Citation: Nicolas Falliere, Liam O Murchu, Eric Chien February 2011)\nDetection: OS API Execution, Process Metadata\nMitigation: Audit, Restrict Library Loading",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0874",
+      "tactic": "Privilege Escalation",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "6d24383f-510c-4b57-b9d4-0a45aed546c2",
+    "text": "Name: Graphical User Interface\nDescription: Adversaries may attempt to gain access to a machine via a Graphical User Interface (GUI) to enhance execution capabilities. Access to a GUI allows a user to interact with a computer in a more visual manner than a CLI. A GUI allows users to move a cursor and click on interface objects, with a mouse and keyboard as the main input devices, as opposed to just using the keyboard.\n\nIf physical access is not an option, then access might be possible via protocols such as VNC on Linux-based and Unix-based operating systems, and RDP on Windows operating systems. An adversary can use this access to execute programs and applications on the target machine.\nDetection: Command Execution, Logon Session Creation, Module Load, Process Creation\nMitigation: Mitigation Limited or Not Effective",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0823",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "15c40cca-256d-4844-a561-7f2535dea4d0",
+    "text": "Name: Change Operating Mode\nDescription: Adversaries may change the operating mode of a controller to gain additional access to engineering functions such as Program Download.   Programmable controllers typically have several modes of operation that control the state of the user program and control access to the controllers API. Operating modes can be physically selected using a key switch on the face of the controller but may also be selected with calls to the controllers API. Operating modes and the mechanisms by which they are selected often vary by vendor and product line. Some commonly implemented operating modes are described below:  \n\n* Program - This mode must be enabled before changes can be made to a devices program. This allows program uploads and downloads between the device and an engineering workstation. Often the PLCs logic Is halted, and all outputs may be forced off. (Citation: N.A. October 2017)  \n* Run - Execution of the devices program occurs in this mode. Input and output (values, points, tags, elements, etc.) are monitored and used according to the programs logic. [Program Upload](https://attack.mitre.org/techniques/T0845) and [Program Download](https://attack.mitre.org/techniques/T0843) are disabled while in this mode. (Citation: Omron) (Citation: Machine Information Systems 2007)  (Citation: N.A. October 2017) (Citation: PLCgurus 2021)   \n* Remote - Allows for remote changes to a PLCs operation mode. (Citation: PLCgurus 2021)    \n* Stop - The PLC and program is stopped, while in this mode, outputs are forced off. (Citation: Machine Information Systems 2007)   \n* Reset - Conditions on the PLC are reset to their original states. Warm resets may retain some memory while cold resets will reset all I/O and data registers. (Citation: Machine Information Systems 2007)   \n* Test / Monitor mode - Similar to run mode, I/O is processed, although this mode allows for monitoring, force set, resets, and more generally tuning or debugging of the system. Often monitor mode may be used as a trial for initialization. (Citation: Omron)\nDetection: Application Log Content, Network Traffic Content, Device Alarm\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0858",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "72b47870-1dad-49a1-99dd-f1dc0058b712",
+    "text": "Name: Change Operating Mode\nDescription: Adversaries may change the operating mode of a controller to gain additional access to engineering functions such as Program Download.   Programmable controllers typically have several modes of operation that control the state of the user program and control access to the controllers API. Operating modes can be physically selected using a key switch on the face of the controller but may also be selected with calls to the controllers API. Operating modes and the mechanisms by which they are selected often vary by vendor and product line. Some commonly implemented operating modes are described below:  \n\n* Program - This mode must be enabled before changes can be made to a devices program. This allows program uploads and downloads between the device and an engineering workstation. Often the PLCs logic Is halted, and all outputs may be forced off. (Citation: N.A. October 2017)  \n* Run - Execution of the devices program occurs in this mode. Input and output (values, points, tags, elements, etc.) are monitored and used according to the programs logic. [Program Upload](https://attack.mitre.org/techniques/T0845) and [Program Download](https://attack.mitre.org/techniques/T0843) are disabled while in this mode. (Citation: Omron) (Citation: Machine Information Systems 2007)  (Citation: N.A. October 2017) (Citation: PLCgurus 2021)   \n* Remote - Allows for remote changes to a PLCs operation mode. (Citation: PLCgurus 2021)    \n* Stop - The PLC and program is stopped, while in this mode, outputs are forced off. (Citation: Machine Information Systems 2007)   \n* Reset - Conditions on the PLC are reset to their original states. Warm resets may retain some memory while cold resets will reset all I/O and data registers. (Citation: Machine Information Systems 2007)   \n* Test / Monitor mode - Similar to run mode, I/O is processed, although this mode allows for monitoring, force set, resets, and more generally tuning or debugging of the system. Often monitor mode may be used as a trial for initialization. (Citation: Omron)\nDetection: Application Log Content, Network Traffic Content, Device Alarm\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0858",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "d41e4cba-2e9a-4ce5-8905-da5c302a272a",
+    "text": "Name: Exploit Public-Facing Application\nDescription: Adversaries may leverage weaknesses to exploit internet-facing software for initial access into an industrial network. Internet-facing software may be user applications, underlying networking implementations, an assets operating system, weak defenses, etc. Targets of this technique may be intentionally exposed for the purpose of remote management and visibility.\n\nAn adversary may seek to target public-facing applications as they may provide direct access into an ICS environment or the ability to move into the ICS network. Publicly exposed applications may be found through online tools that scan the internet for open ports and services. Version numbers for the exposed application may provide adversaries an ability to target specific known vulnerabilities. Exposed control protocol or remote access ports found in Commonly Used Port may be of interest by adversaries.\nDetection: Application Log Content, Network Traffic Content\nMitigation: Application Isolation and Sandboxing, Exploit Protection, Network Segmentation, Privileged Account Management, Update Software, Vulnerability Scanning",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0819",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "2b9bce2e-76b8-44a9-a71f-2f0a7bf43b9a",
+    "text": "Name: Valid Accounts\nDescription: Adversaries may steal the credentials of a specific user or service account using credential access techniques. In some cases, default credentials for control system devices may be publicly available. Compromised credentials may be used to bypass access controls placed on various resources on hosts and within the network, and may even be used for persistent access to remote systems. Compromised and default credentials may also grant an adversary increased privilege to specific systems and devices or access to restricted areas of the network. Adversaries may choose not to use malware or tools, in conjunction with the legitimate access those credentials provide, to make it harder to detect their presence or to control devices and send legitimate commands in an unintended way. \n\nAdversaries may also create accounts, sometimes using predefined account names and passwords, to provide a means of backup access for persistence. (Citation: Booz Allen Hamilton) \n\nThe overlap of credentials and permissions across a network of systems is of concern because the adversary may be able to pivot across accounts and systems to reach a high level of access (i.e., domain or enterprise administrator)  and possibly between the enterprise and operational technology environments. Adversaries may be able to leverage valid credentials from one system to gain access to another system.\nDetection: Logon Session Creation, Logon Session Metadata, User Account Authentication\nMitigation: Access Management, Account Use Policies, Active Directory Configuration, Application Developer Guidance, Audit, Filter Network Traffic, Multi-factor Authentication, Password Policies, Privileged Account Management, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0859",
+      "tactic": "Persistence",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "ae9aae75-4c58-4634-9877-93ee65ded9c7",
+    "text": "Name: Valid Accounts\nDescription: Adversaries may steal the credentials of a specific user or service account using credential access techniques. In some cases, default credentials for control system devices may be publicly available. Compromised credentials may be used to bypass access controls placed on various resources on hosts and within the network, and may even be used for persistent access to remote systems. Compromised and default credentials may also grant an adversary increased privilege to specific systems and devices or access to restricted areas of the network. Adversaries may choose not to use malware or tools, in conjunction with the legitimate access those credentials provide, to make it harder to detect their presence or to control devices and send legitimate commands in an unintended way. \n\nAdversaries may also create accounts, sometimes using predefined account names and passwords, to provide a means of backup access for persistence. (Citation: Booz Allen Hamilton) \n\nThe overlap of credentials and permissions across a network of systems is of concern because the adversary may be able to pivot across accounts and systems to reach a high level of access (i.e., domain or enterprise administrator)  and possibly between the enterprise and operational technology environments. Adversaries may be able to leverage valid credentials from one system to gain access to another system.\nDetection: Logon Session Creation, Logon Session Metadata, User Account Authentication\nMitigation: Access Management, Account Use Policies, Active Directory Configuration, Application Developer Guidance, Audit, Filter Network Traffic, Multi-factor Authentication, Password Policies, Privileged Account Management, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0859",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "3c1adf27-1073-4342-82b5-29a5b4e9ed60",
+    "text": "Name: External Remote Services\nDescription: Adversaries may leverage external remote services as a point of initial access into your network. These services allow users to connect to internal network resources from external locations. Examples are VPNs, Citrix, and other access mechanisms. Remote service gateways often manage connections and credential authentication for these services. (Citation: Daniel Oakley, Travis Smith, Tripwire)\n\nExternal remote services allow administration of a control system from outside the system. Often, vendors and internal engineering groups have access to external remote services to control system networks via the corporate network. In some cases, this access is enabled directly from the internet. While remote access enables ease of maintenance when a control system is in a remote area, compromise of remote access solutions is a liability. The adversary may use these services to gain access to and execute attacks against a control system network. Access to valid accounts is often a requirement. \n\nAs they look for an entry point into the control system network, adversaries may begin searching for existing point-to-point VPN implementations at trusted third party networks or through remote support employee connections where split tunneling is enabled. (Citation: Electricity Information Sharing and Analysis Center; SANS Industrial Control Systems March 2016)\n\nDetection: Application Log Content, Logon Session Metadata, Network Traffic Flow\nMitigation: Account Use Policies, Disable or Remove Feature or Program, Limit Access to Resource Over Network, Multi-factor Authentication, Network Segmentation, Password Policies, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0822",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "753653e0-cbab-458f-9ec8-435dccfc0e3e",
+    "text": "Name: User Execution\nDescription: Adversaries may rely on a targeted organizations user interaction for the execution of malicious code. User interaction may consist of installing applications, opening email attachments, or granting higher permissions to documents. \n\nAdversaries may embed malicious code or visual basic code into files such as Microsoft Word and Excel documents or software installers. (Citation: Booz Allen Hamilton) Execution of this code requires that the user enable scripting or write access within the document. Embedded code may not always be noticeable to the user especially in cases of trojanized software. (Citation: Daavid Hentunen, Antti Tikkanen June 2014) \n\nA Chinese spearphishing campaign running from December 9, 2011 through February 29, 2012 delivered malware through spearphishing attachments which required user action to achieve execution. (Citation: CISA AA21-201A Pipeline Intrusion July 2021)\nDetection: Application Log Content, Command Execution, File Access, Network Connection Creation, Network Traffic Content, Process Creation\nMitigation: Antivirus/Antimalware, Code Signing, Execution Prevention, Network Intrusion Prevention, Restrict Web-Based Content, User Training",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0863",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "dd02ca77-452b-4d31-a2eb-c7bfcbdb17a0",
+    "text": "Name: Native API\nDescription: Adversaries may directly interact with the native OS application programming interface (API) to access system functions. Native APIs provide a controlled means of calling low-level OS services within the kernel, such as those involving hardware/devices, memory, and processes. (Citation: The MITRE Corporation May 2017) These native APIs are leveraged by the OS during system boot (when other system components are not yet initialized) as well as carrying out tasks and requests during routine operations. \n\nFunctionality provided by native APIs are often also exposed to user-mode applications via interfaces and libraries. For example, functions such as memcpy and direct operations on memory registers can be used to modify user and system memory space.\nDetection: OS API Execution\nMitigation: Execution Prevention",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0834",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "cf3fb060-e5e3-4364-a31c-e92183a26d42",
+    "text": "Name: Program Download\nDescription: Adversaries may perform a program download to transfer a user program to a controller. \n\nVariations of program download, such as online edit and program append, allow a controller to continue running during the transfer and reconfiguration process without interruption to process control. However, before starting a full program download (i.e., download all) a controller may need to go into a stop state. This can have negative consequences on the physical process, especially if the controller is not able to fulfill a time-sensitive action. Adversaries may choose to avoid a download all in favor of an online edit or program append to avoid disrupting the physical process. An adversary may need to use the technique Detect Operating Mode or Change Operating Mode to make sure the controller is in the proper mode to accept a program download.\n\nThe granularity of control to transfer a user program in whole or parts is dictated by the management protocol (e.g., S7CommPlus, TriStation) and underlying controller API. Thus, program download is a high-level term for the suite of vendor-specific API calls used to configure a controllers user program memory space.  \n\n[Modify Controller Tasking](https://attack.mitre.org/techniques/T0821) and [Modify Program](https://attack.mitre.org/techniques/T0889) represent the configuration changes that are transferred to a controller via a program download.\nDetection: Application Log Content, Asset Inventory, Network Traffic Content, Device Alarm\nMitigation: Access Management, Audit, Authorization Enforcement, Code Signing, Communication Authenticity, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0843",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "1a2ca380-0848-46bc-abde-a0dde3337852",
+    "text": "Name: Denial of Service\nDescription: Adversaries may perform Denial-of-Service (DoS) attacks to disrupt expected device functionality. Examples of DoS attacks include overwhelming the target device with a high volume of requests in a short time period and sending the target device a request it does not know how to handle. Disrupting device state may temporarily render it unresponsive, possibly lasting until a reboot can occur. When placed in this state, devices may be unable to send and receive requests, and may not perform expected response functions in reaction to other events in the environment. \n\nSome ICS devices are particularly sensitive to DoS events, and may become unresponsive in reaction to even a simple ping sweep. Adversaries may also attempt to execute a Permanent Denial-of-Service (PDoS) against certain devices, such as in the case of the BrickerBot malware. (Citation: ICS-CERT April 2017) \n\nAdversaries may exploit a software vulnerability to cause a denial of service by taking advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Vulnerabilities may exist in software that can be used to cause a denial of service condition. \n\nAdversaries may have prior knowledge about industrial protocols or control devices used in the environment through [Remote System Information Discovery](https://attack.mitre.org/techniques/T0888). There are examples of adversaries remotely causing a [Device Restart/Shutdown](https://attack.mitre.org/techniques/T0816) by exploiting a vulnerability that induces uncontrolled resource consumption. (Citation: ICS-CERT August 2018) (Citation: Common Weakness Enumeration January 2019) (Citation: MITRE March 2018) \nDetection: Application Log Content, Network Traffic Content, Network Traffic Flow, Process History/Live Data\nMitigation: Watchdog Timers",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0814",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "65c56421-3a94-47d1-bdde-16b759978957",
+    "text": "Name: Automated Collection\nDescription: Adversaries may automate collection of industrial environment information using tools or scripts. This automated collection may leverage native control protocols and tools available in the control systems environment. For example, the OPC protocol may be used to enumerate and gather information. Access to a system or interface with these native protocols may allow collection and enumeration of other attached, communicating servers and devices.\nDetection: Command Execution, File Access, Network Traffic Content, Script Execution\nMitigation: Network Allowlists, Network Segmentation",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0802",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "07a9c599-3c09-4b84-bbda-ef815cfd1a69",
+    "text": "Name: Unauthorized Command Message\nDescription: Adversaries may send unauthorized command messages to instruct control system assets to perform actions outside of their intended functionality, or without the logical preconditions to trigger their expected function. Command messages are used in ICS networks to give direct instructions to control systems devices. If an adversary can send an unauthorized command message to a control system, then it can instruct the control systems device to perform an action outside the normal bounds of the device's actions. An adversary could potentially instruct a control systems device to perform an action that will cause an [Impact](https://attack.mitre.org/tactics/TA0105). (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)\n\nIn the Dallas Siren incident, adversaries were able to send command messages to activate tornado alarm systems across the city without an impending tornado or other disaster. (Citation: Zack Whittaker April 2017) (Citation: Benjamin Freed March 2019)\nDetection: Application Log Content, Network Traffic Content, Network Traffic Flow, Process History/Live Data, Process/Event Alarm\nMitigation: Communication Authenticity, Filter Network Traffic, Network Allowlists, Network Segmentation, Software Process and Device Authentication, Validate Program Inputs",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0855",
+      "tactic": "Impair Process Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "396b53d1-0b35-4a63-85ee-74fef33a803b",
+    "text": "Name: Damage to Property\nDescription: Adversaries may cause damage and destruction of property to infrastructure, equipment, and the surrounding environment when attacking control systems. This technique may result in device and operational equipment breakdown, or represent tangential damage from other techniques used in an attack. Depending on the severity of physical damage and disruption caused to control processes and systems, this technique may result in [Loss of Safety](https://attack.mitre.org/techniques/T0880). Operations that result in [Loss of Control](https://attack.mitre.org/techniques/T0827) may also cause damage to property, which may be directly or indirectly motivated by an adversary seeking to cause impact in the form of [Loss of Productivity and Revenue](https://attack.mitre.org/techniques/T0828). \n\n\nThe German Federal Office for Information Security (BSI) reported a targeted attack on a steel mill under an incidents affecting business section of its 2014 IT Security Report. (Citation: BSI State of IT Security 2014)  These targeted attacks affected industrial operations and resulted in breakdowns of control system components and even entire installations. As a result of these breakdowns, massive impact and damage resulted from the uncontrolled shutdown of a blast furnace. \n\nA Polish student used a remote controller device to interface with the Lodz city tram system in Poland. (Citation: John Bill May 2017) (Citation: Shelley Smith February 2008) (Citation: Bruce Schneier January 2008) Using this remote, the student was able to capture and replay legitimate tram signals. This resulted in damage to impacted trams, people, and the surrounding property. Reportedly, four trams were derailed and were forced to make emergency stops. (Citation: Shelley Smith February 2008) Commands issued by the student may have also resulted in tram collisions, causing harm to those on board and the environment outside. (Citation: Bruce Schneier January 2008)\nMitigation: Mechanical Protection Layers, Network Allowlists, Safety Instrumented Systems",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0879",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "9c2c252b-a3fd-4239-b6a5-88dce712e058",
+    "text": "Name: Loss of Safety\nDescription: Adversaries may compromise safety system functions designed to maintain safe operation of a process when unacceptable or dangerous conditions occur. Safety systems are often composed of the same elements as control systems but have the sole purpose of ensuring the process fails in a predetermined safe manner. \n\nMany unsafe conditions in process control happen too quickly for a human operator to react to. Speed is critical in correcting these conditions to limit serious impacts such as Loss of Control and Property Damage. \n\nAdversaries may target and disable safety system functions as a prerequisite to subsequent attack execution or to allow for future unsafe conditionals to go unchecked. Detection of a Loss of Safety by operators can result in the shutdown of a process due to strict policies regarding safety systems. This can cause a Loss of Productivity and Revenue and may meet the technical goals of adversaries seeking to cause process disruptions.\nMitigation: Mechanical Protection Layers, Safety Instrumented Systems",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0880",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "90d2ee4b-5626-468a-b1fe-b28c05baa9cc",
+    "text": "Name: Modify Alarm Settings\nDescription: Adversaries may modify alarm settings to prevent alerts that may inform operators of their presence or to prevent responses to dangerous and unintended scenarios. Reporting messages are a standard part of data acquisition in control systems. Reporting messages are used as a way to transmit system state information and acknowledgements that specific actions have occurred. These messages provide vital information for the management of a physical process, and keep operators, engineers, and administrators aware of the state of system devices and physical processes. \n\nIf an adversary is able to change the reporting settings, certain events could be prevented from being reported. This type of modification can also prevent operators or devices from performing actions to keep the system in a safe state. If critical reporting messages cannot trigger these actions then a [Impact](https://attack.mitre.org/tactics/TA0105) could occur. \n\nIn ICS environments, the adversary may have to use [Alarm Suppression](https://attack.mitre.org/techniques/T0878) or contend with multiple alarms and/or alarm propagation to achieve a specific goal to evade detection or prevent intended responses from occurring. (Citation: Jos Wetzels, Marina Krotofil 2019)  Methods of suppression often rely on modification of alarm settings, such as modifying in memory code to fixed values or tampering with assembly level instruction code. \nDetection: Application Log Content, Asset Inventory, Network Traffic Content, Process History/Live Data\nMitigation: Access Management, Authorization Enforcement, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0838",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "eab70d42-2e94-4958-aab2-f171274df591",
+    "text": "Name: Transient Cyber Asset\nDescription: Adversaries may target devices that are transient across ICS networks and external networks. Normally, transient assets are brought into an environment by authorized personnel and do not remain in that environment on a permanent basis. (Citation: North American Electric Reliability Corporation June 2021) Transient assets are commonly needed to support management functions and may be more common in systems where a remotely managed asset is not feasible, external connections for remote access do not exist, or 3rd party contractor/vendor access is required. \n\nAdversaries may take advantage of transient assets in different ways. For instance, adversaries may target a transient asset when it is connected to an external network and then leverage its trusted access in another environment to launch an attack. They may also take advantage of installed applications and libraries that are used by legitimate end-users to interact with control system devices. \n\nTransient assets, in some cases, may not be deployed with a secure configuration leading to weaknesses that could allow an adversary to propagate malicious executable code, e.g., the transient asset may be infected by malware and when connected to an ICS environment the malware propagates onto other systems. \nDetection: Application Log Content, Network Traffic Flow\nMitigation: Antivirus/Antimalware, Audit, Encrypt Sensitive Information, Network Segmentation, Update Software",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0864",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "d9fc9ae8-28bc-4326-9deb-72b85780b20c",
+    "text": "Name: Indicator Removal on Host\nDescription: Adversaries may attempt to remove indicators of their presence on a system in an effort to cover their tracks. In cases where an adversary may feel detection is imminent, they may try to overwrite, delete, or cover up changes they have made to the device.\nDetection: Command Execution, File Deletion, File Metadata, File Modification, OS API Execution, Process Creation, Windows Registry Key Deletion, Windows Registry Key Modification\nMitigation: Restrict File and Directory Permissions",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0872",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "3832520b-d9ce-4e31-9065-bdc1939578de",
+    "text": "Name: Data Destruction\nDescription: Adversaries may perform data destruction over the course of an operation. The adversary may drop or create malware, tools, or other non-native files on a target system to accomplish this, potentially leaving behind traces of malicious activities. Such non-native files and other data may be removed over the course of an intrusion to maintain a small footprint or as a standard part of the post-intrusion cleanup process. (Citation: Enterprise ATT&CK January 2018)\n\nData destruction may also be used to render operator interfaces unable to respond and to disrupt response functions from occurring as expected. An adversary may also destroy data backups that are vital to recovery after an incident.\n\nStandard file deletion commands are available on most operating system and device interfaces to perform cleanup, but adversaries may use other tools as well. Two examples are Windows Sysinternals SDelete and Active@ Killdisk.\nDetection: Command Execution, File Deletion, File Modification, Process Creation\nMitigation: Data Backup, Privileged Account Management, Restrict File and Directory Permissions",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0809",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "27d61820-4c50-43f2-b9d9-e5cbdd182033",
+    "text": "Name: Rogue Master\nDescription: Adversaries may setup a rogue master to leverage control server functions to communicate with outstations. A rogue master can be used to send legitimate control messages to other control system devices, affecting processes in unintended ways. It may also be used to disrupt network communications by capturing and receiving the network traffic meant for the actual master. Impersonating a master may also allow an adversary to avoid detection. \n\nIn the case of the 2017 Dallas Siren incident, adversaries used a rogue master to send command messages to the 156 distributed sirens across the city, either through a single rogue transmitter with a strong signal, or using many distributed repeaters. (Citation: Bastille April 2017) (Citation: Zack Whittaker April 2017)\nDetection: Application Log Content, Asset Inventory, Network Traffic Content, Network Traffic Flow, Device Alarm\nMitigation: Communication Authenticity, Filter Network Traffic, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0848",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "489b6cb6-512f-4b2e-b642-51b68eca6561",
+    "text": "Name: Wireless Sniffing\nDescription: Adversaries may seek to capture radio frequency (RF) communication used for remote control and reporting in distributed environments. RF communication frequencies vary between 3 kHz to 300 GHz, although are commonly between 300 MHz to 6 GHz. (Citation: Candell, R., Hany, M., Lee, K. B., Liu,Y., Quimby, J., Remley, K. April 2018)  The wavelength and frequency of the signal affect how the signal propagates through open air, obstacles (e.g. walls and trees) and the type of radio required to capture them. These characteristics are often standardized in the protocol and hardware and may have an effect on how the signal is captured. Some examples of wireless protocols that may be found in cyber-physical environments are: WirelessHART, Zigbee, WIA-FA, and 700 MHz Public Safety Spectrum. \n\nAdversaries may capture RF communications by using specialized hardware, such as software defined radio (SDR), handheld radio, or a computer with radio demodulator tuned to the communication frequency. (Citation: Bastille April 2017) Information transmitted over a wireless medium may be captured in-transit whether the sniffing device is the intended destination or not. This technique may be particularly useful to an adversary when the communications are not encrypted. (Citation: Gallagher, S. April 2017) \n\nIn the 2017 Dallas Siren incident, it is suspected that adversaries likely captured wireless command message broadcasts on a 700 MHz frequency during a regular test of the system. These messages were later replayed to trigger the alarm systems. (Citation: Gallagher, S. April 2017)\nDetection: Network Traffic Flow\nMitigation: Encrypt Network Traffic, Minimize Wireless Signal Propagation",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0887",
+      "tactic": "Discovery",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "bb6e2aa9-aac0-45c3-b2b9-862a8bc9ad2e",
+    "text": "Name: Wireless Sniffing\nDescription: Adversaries may seek to capture radio frequency (RF) communication used for remote control and reporting in distributed environments. RF communication frequencies vary between 3 kHz to 300 GHz, although are commonly between 300 MHz to 6 GHz. (Citation: Candell, R., Hany, M., Lee, K. B., Liu,Y., Quimby, J., Remley, K. April 2018)  The wavelength and frequency of the signal affect how the signal propagates through open air, obstacles (e.g. walls and trees) and the type of radio required to capture them. These characteristics are often standardized in the protocol and hardware and may have an effect on how the signal is captured. Some examples of wireless protocols that may be found in cyber-physical environments are: WirelessHART, Zigbee, WIA-FA, and 700 MHz Public Safety Spectrum. \n\nAdversaries may capture RF communications by using specialized hardware, such as software defined radio (SDR), handheld radio, or a computer with radio demodulator tuned to the communication frequency. (Citation: Bastille April 2017) Information transmitted over a wireless medium may be captured in-transit whether the sniffing device is the intended destination or not. This technique may be particularly useful to an adversary when the communications are not encrypted. (Citation: Gallagher, S. April 2017) \n\nIn the 2017 Dallas Siren incident, it is suspected that adversaries likely captured wireless command message broadcasts on a 700 MHz frequency during a regular test of the system. These messages were later replayed to trigger the alarm systems. (Citation: Gallagher, S. April 2017)\nDetection: Network Traffic Flow\nMitigation: Encrypt Network Traffic, Minimize Wireless Signal Propagation",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0887",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "257bd7a4-3637-4fc0-bbb0-ffc92409689f",
+    "text": "Name: Detect Operating Mode\nDescription: Adversaries may gather information about a PLCs or controllers current operating mode. Operating modes dictate what change or maintenance functions can be manipulated and are often controlled by a key switch on the PLC (e.g.,  run, prog [program], and remote). Knowledge of these states may be valuable to an adversary to determine if they are able to reprogram the PLC. Operating modes and the mechanisms by which they are selected often vary by vendor and product line. Some commonly implemented operating modes are described below:  \n\n* Program - This mode must be enabled before changes can be made to a devices program. This allows program uploads and downloads between the device and an engineering workstation. Often the PLCs logic Is halted, and all outputs may be forced off. (Citation: N.A. October 2017)  \n* Run - Execution of the devices program occurs in this mode. Input and output (values, points, tags, elements, etc.) are monitored and used according to the programs logic.[Program Upload](https://attack.mitre.org/techniques/T0845) and [Program Download](https://attack.mitre.org/techniques/T0843) are disabled while in this mode. (Citation: Omron) (Citation: Machine Information Systems 2007)  (Citation: N.A. October 2017) (Citation: PLCgurus 2021)   \n* Remote - Allows for remote changes to a PLCs operation mode. (Citation: PLCgurus 2021)    \n* Stop - The PLC and program is stopped, while in this mode, outputs are forced off. (Citation: Machine Information Systems 2007)   \n* Reset - Conditions on the PLC are reset to their original states. Warm resets may retain some memory while cold resets will reset all I/O and data registers. (Citation: Machine Information Systems 2007)   \n* Test / Monitor mode - Similar to run mode, I/O is processed, although this mode allows for monitoring, force set, resets, and more generally tuning or debugging of the system. Often monitor mode may be used as a trial for initialization. (Citation: Omron)\nDetection: Network Traffic Content\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0868",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "6e5f4347-ab7b-4a2d-a7bb-05001e5b3950",
+    "text": "Name: Hardcoded Credentials\nDescription: Adversaries may leverage credentials that are hardcoded in software or firmware to gain an unauthorized interactive user session to an asset. Examples credentials that may be hardcoded in an asset include:\n\n* Username/Passwords\n* Cryptographic keys/Certificates\n* API tokens\n\nUnlike [Default Credentials](https://attack.mitre.org/techniques/T0812), these credentials are built into the system in a way that they either cannot be changed by the asset owner, or may be infeasible to change because of the impact it would cause to the control system operation. These credentials may be reused across whole product lines or device models and are often not published or known to the owner and operators of the asset. \n\nAdversaries may utilize these hardcoded credentials to move throughout the control system environment or provide reliable access for their tools to interact with industrial assets. \n\nDetection: Logon Session Creation, Network Traffic Content\nMitigation: Access Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0891",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "b1fdacb8-f2df-462d-911a-c1cfc36a23ef",
+    "text": "Name: Hardcoded Credentials\nDescription: Adversaries may leverage credentials that are hardcoded in software or firmware to gain an unauthorized interactive user session to an asset. Examples credentials that may be hardcoded in an asset include:\n\n* Username/Passwords\n* Cryptographic keys/Certificates\n* API tokens\n\nUnlike [Default Credentials](https://attack.mitre.org/techniques/T0812), these credentials are built into the system in a way that they either cannot be changed by the asset owner, or may be infeasible to change because of the impact it would cause to the control system operation. These credentials may be reused across whole product lines or device models and are often not published or known to the owner and operators of the asset. \n\nAdversaries may utilize these hardcoded credentials to move throughout the control system environment or provide reliable access for their tools to interact with industrial assets. \n\nDetection: Logon Session Creation, Network Traffic Content\nMitigation: Access Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0891",
+      "tactic": "Persistence",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "f4520905-1792-4ac5-b258-db923908945d",
+    "text": "Name: Loss of View\nDescription: Adversaries may cause a sustained or permanent loss of view where the ICS equipment will require local, hands-on operator intervention; for instance, a restart or manual operation. By causing a sustained reporting or visibility loss, the adversary can effectively hide the present state of operations. This loss of view can occur without affecting the physical processes themselves. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay)\nMitigation: Data Backup, Out-of-Band Communications Channel, Redundancy of Service",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0829",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "394cd5de-9c6e-4751-8944-eeda2e930793",
+    "text": "Name: Screen Capture\nDescription: Adversaries may attempt to perform screen capture of devices in the control system environment. Screenshots may be taken of workstations, HMIs, or other devices that display environment-relevant process, device, reporting, alarm, or related data. These device displays may reveal information regarding the ICS process, layout, control, and related schematics. In particular, an HMI can provide a lot of important industrial process information. (Citation: ICS-CERT October 2017) Analysis of screen captures may provide the adversary with an understanding of intended operations and interactions between critical devices.\nDetection: Command Execution, OS API Execution\nMitigation: Mitigation Limited or Not Effective",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0852",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "8abeee1b-40e6-4439-bc5f-0709a08ff7e9",
+    "text": "Name: Block Serial COM\nDescription: Adversaries may block access to serial COM to prevent instructions or configurations from reaching target devices. Serial Communication ports (COM) allow communication with control system devices. Devices can receive command and configuration messages over such serial COM. Devices also use serial COM to send command and reporting messages. Blocking device serial COM may also block command messages and block reporting messages. \n\nA serial to Ethernet converter is often connected to a serial COM to facilitate communication between serial and Ethernet devices. One approach to blocking a serial COM would be to create and hold open a TCP session with the Ethernet side of the converter. A serial to Ethernet converter may have a few ports open to facilitate multiple communications. For example, if there are three serial COM available -- 1, 2 and 3 --, the converter might be listening on the corresponding ports 20001, 20002, and 20003. If a TCP/IP connection is opened with one of these ports and held open, then the port will be unavailable for use by another party. One way the adversary could achieve this would be to initiate a TCP session with the serial to Ethernet converter at 10.0.0.1 via Telnet on serial port 1 with the following command: telnet 10.0.0.1 20001.\nDetection: Application Log Content, Network Traffic Flow, Process History/Live Data, Process/Event Alarm, Process Termination\nMitigation: Network Allowlists, Network Segmentation, Out-of-Band Communications Channel",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0805",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "7cc4323f-d772-4e84-8f54-1d7529f97025",
+    "text": "Name: Denial of Control\nDescription: Adversaries may cause a denial of control to temporarily prevent operators and engineers from interacting with process controls. An adversary may attempt to deny process control access to cause a temporary loss of communication with the control device or to prevent operator adjustment of process controls. An affected process may still be operating during the period of control loss, but not necessarily in a desired state. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay)\n\nIn the 2017 Dallas Siren incident operators were unable to disable the false alarms from the Office of Emergency Management headquarters. (Citation: Mark Loveless April 2017)\nMitigation: Data Backup, Out-of-Band Communications Channel, Redundancy of Service",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0813",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "63eefac8-fc00-4d3b-a7d7-1d005359b0bc",
+    "text": "Name: Program Upload\nDescription: Adversaries may attempt to upload a program from a PLC to gather information about an industrial process. Uploading a program may allow them to acquire and study the underlying logic. Methods of program upload include vendor software, which enables the user to upload and read a program running on a PLC. This software can be used to upload the target program to a workstation, jump box, or an interfacing device.\nDetection: Application Log Content, Network Traffic Content, Network Traffic Flow\nMitigation: Access Management, Authorization Enforcement, Communication Authenticity, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Software Process and Device Authentication",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0845",
+      "tactic": "Collection",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "3a42fab4-17a3-43a6-86ef-186123d01664",
+    "text": "Name: Default Credentials\nDescription: Adversaries may leverage manufacturer or supplier set default credentials on control system devices. These default credentials may have administrative permissions and may be necessary for initial configuration of the device. It is general best practice to change the passwords for these accounts as soon as possible, but some manufacturers may have devices that have passwords or usernames that cannot be changed. (Citation: Keith Stouffer May 2015)\n\nDefault credentials are normally documented in an instruction manual that is either packaged with the device, published online through official means, or published online through unofficial means. Adversaries may leverage default credentials that have not been properly modified or disabled.\nDetection: Logon Session Creation, Network Traffic Content\nMitigation: Access Management, Password Policies",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0812",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "fe50bb1a-af39-45ac-8972-76d370959667",
+    "text": "Name: Block Reporting Message\nDescription: Adversaries may block or prevent a reporting message from reaching its intended target. In control systems, reporting messages contain telemetry data (e.g., I/O values) pertaining to the current state of equipment and the industrial process. By blocking these reporting messages, an adversary can potentially hide their actions from an operator.\n\nBlocking reporting messages in control systems that manage physical processes may contribute to system impact, causing inhibition of a response function. A control system may not be able to respond in a proper or timely manner to an event, such as a dangerous fault, if its corresponding reporting message is blocked. (Citation: Bonnie Zhu, Anthony Joseph, Shankar Sastry 2011)  (Citation: Electricity Information Sharing and Analysis Center; SANS Industrial Control Systems March 2016)\nDetection: Application Log Content, Network Traffic Flow, Process History/Live Data, Process/Event Alarm, Process Termination\nMitigation: Network Allowlists, Out-of-Band Communications Channel, Static Network Configuration",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0804",
+      "tactic": "Inhibit Response Function",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "53cd3520-cfb2-423f-ae2f-f3c1b145f00d",
+    "text": "Name: Scripting\nDescription: Adversaries may use scripting languages to execute arbitrary code in the form of a pre-written script or in the form of user-supplied code to an interpreter. Scripting languages are programming languages that differ from compiled languages, in that scripting languages use an interpreter, instead of a compiler. These interpreters read and compile part of the source code just before it is executed, as opposed to compilers, which compile each and every line of code to an executable file. Scripting allows software developers to run their code on any system where the interpreter exists. This way, they can distribute one package, instead of precompiling executables for many different systems. Scripting languages, such as Python, have their interpreters shipped as a default with many Linux distributions. \n\nIn addition to being a useful tool for developers and administrators, scripting language interpreters may be abused by the adversary to execute code in the target environment. Due to the nature of scripting languages, this allows for weaponized code to be deployed to a target easily, and leaves open the possibility of on-the-fly scripting to perform a task.\nDetection: Command Execution, Module Load, Process Creation, Process Metadata, Script Execution\nMitigation: Application Isolation and Sandboxing, Disable or Remove Feature or Program, Execution Prevention",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0853",
+      "tactic": "Execution",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "2dee5abc-abe6-4cc1-a034-ef5ea8a7a90d",
+    "text": "Name: Loss of Productivity and Revenue\nDescription: Adversaries may cause loss of productivity and revenue through disruption and even damage to the availability and integrity of control system operations, devices, and related processes. This technique may manifest as a direct effect of an ICS-targeting attack or tangentially, due to an IT-targeting attack against non-segregated environments. \n\nIn cases where these operations or services are brought to a halt, the loss of productivity may eventually present an impact for the end-users or consumers of products and services. The disrupted supply-chain may result in supply shortages and increased prices, among other consequences. \n\nA ransomware attack on an Australian beverage company resulted in the shutdown of some manufacturing sites, including precautionary halts to protect key systems. (Citation: Paganini, Pierluigi June 2020) The company announced the potential for temporary shortages of their products following the attack. (Citation: Paganini, Pierluigi June 2020) (Citation: Lion Corporation June 2020) \n\nIn the 2021 Colonial Pipeline ransomware incident, the pipeline was unable to transport approximately 2.5 million barrels of fuel per day to the East Coast.  (Citation: Colonial Pipeline Company May 2021)\nMitigation: Data Backup",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0828",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "aea130f2-c149-4418-a6cd-5a7d3e46caf7",
+    "text": "Name: Exploitation for Privilege Escalation\nDescription: Adversaries may exploit software vulnerabilities in an attempt to elevate privileges. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. Security constructs such as permission levels will often hinder access to information and use of certain techniques, so adversaries will likely need to perform privilege escalation to include use of software exploitation to circumvent those restrictions. (Citation: The MITRE Corporation) \n\nWhen initially gaining access to a system, an adversary may be operating within a lower privileged process which will prevent them from accessing certain resources on the system. Vulnerabilities may exist, usually in operating system components and software commonly running at higher permissions, that can be exploited to gain higher levels of access on the system. This could enable someone to move from unprivileged or user level permissions to SYSTEM or root permissions depending on the component that is vulnerable. This may be a necessary step for an adversary compromising an endpoint system that has been properly configured and limits other privilege escalation methods. (Citation: The MITRE Corporation)\nDetection: Application Log Content\nMitigation: Application Isolation and Sandboxing, Exploit Protection, Threat Intelligence Program, Update Software",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0890",
+      "tactic": "Privilege Escalation",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "c5bb0ec7-f7f9-4e65-bd54-83012aecccd1",
+    "text": "Name: Remote Services\nDescription: Adversaries may leverage remote services to move between assets and network segments. These services are often used to allow operators to interact with systems remotely within the network, some examples are RDP, SMB, SSH, and other similar mechanisms. (Citation: Blake Johnson, Dan Caban, Marina Krotofil, Dan Scali, Nathan Brubaker, Christopher Glyer December 2017) (Citation: Dragos December 2017) (Citation: Joe Slowik April 2019) \n\nRemote services could be used to support remote access, data transmission, authentication, name resolution, and other remote functions. Further, remote services may be necessary to allow operators and administrators to configure systems within the network from their engineering or management workstations. An adversary may use this technique to access devices which may be dual-homed (Citation: Blake Johnson, Dan Caban, Marina Krotofil, Dan Scali, Nathan Brubaker, Christopher Glyer December 2017) to multiple network segments, and can be used for [Program Download](https://attack.mitre.org/techniques/T0843) or to execute attacks on control devices directly through [Valid Accounts](https://attack.mitre.org/techniques/T0859).\n\nSpecific remote services (RDP & VNC) may be a precursor to enable [Graphical User Interface](https://attack.mitre.org/techniques/T0823) execution on devices such as HMIs or engineering workstation software.\n\nBased on incident data, CISA and FBI assessed that Chinese state-sponsored actors also compromised various authorized remote access channels, including systems designed to transfer data and/or allow access between corporate and ICS networks.  (Citation: CISA AA21-201A Pipeline Intrusion July 2021)\nDetection: Command Execution, Logon Session Creation, Module Load, Network Share Access, Network Connection Creation, Network Traffic Flow, Process Creation\nMitigation: Access Management, Authorization Enforcement, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Password Policies, Software Process and Device Authentication, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0886",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "15d058ba-8486-4a6b-a95b-55cac8512f1c",
+    "text": "Name: Remote Services\nDescription: Adversaries may leverage remote services to move between assets and network segments. These services are often used to allow operators to interact with systems remotely within the network, some examples are RDP, SMB, SSH, and other similar mechanisms. (Citation: Blake Johnson, Dan Caban, Marina Krotofil, Dan Scali, Nathan Brubaker, Christopher Glyer December 2017) (Citation: Dragos December 2017) (Citation: Joe Slowik April 2019) \n\nRemote services could be used to support remote access, data transmission, authentication, name resolution, and other remote functions. Further, remote services may be necessary to allow operators and administrators to configure systems within the network from their engineering or management workstations. An adversary may use this technique to access devices which may be dual-homed (Citation: Blake Johnson, Dan Caban, Marina Krotofil, Dan Scali, Nathan Brubaker, Christopher Glyer December 2017) to multiple network segments, and can be used for [Program Download](https://attack.mitre.org/techniques/T0843) or to execute attacks on control devices directly through [Valid Accounts](https://attack.mitre.org/techniques/T0859).\n\nSpecific remote services (RDP & VNC) may be a precursor to enable [Graphical User Interface](https://attack.mitre.org/techniques/T0823) execution on devices such as HMIs or engineering workstation software.\n\nBased on incident data, CISA and FBI assessed that Chinese state-sponsored actors also compromised various authorized remote access channels, including systems designed to transfer data and/or allow access between corporate and ICS networks.  (Citation: CISA AA21-201A Pipeline Intrusion July 2021)\nDetection: Command Execution, Logon Session Creation, Module Load, Network Share Access, Network Connection Creation, Network Traffic Flow, Process Creation\nMitigation: Access Management, Authorization Enforcement, Filter Network Traffic, Human User Authentication, Network Allowlists, Network Segmentation, Password Policies, Software Process and Device Authentication, User Account Management",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0886",
+      "tactic": "Lateral Movement",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "ca0df017-6567-4105-a519-4b40bf2a2cc9",
+    "text": "Name: Standard Application Layer Protocol\nDescription: Adversaries may establish command and control capabilities over commonly used application layer protocols such as HTTP(S), OPC, RDP, telnet, DNP3, and modbus. These protocols may be used to disguise adversary actions as benign network traffic. Standard protocols may be seen on their associated port or in some cases over a non-standard port.  Adversaries may use these protocols to reach out of the network for command and control, or in some cases to other infected devices within the network.\nDetection: Network Traffic Content, Network Traffic Flow\nMitigation: Network Allowlists, Network Intrusion Prevention, Network Segmentation",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0869",
+      "tactic": "Command and Control",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "aa19e427-1548-4177-959f-9b5888cc64de",
+    "text": "Name: Masquerading\nDescription: Adversaries may use masquerading to disguise a malicious application or executable as another file, to avoid operator and engineer suspicion. Possible disguises of these masquerading files can include commonly found programs, expected vendor executables and configuration files, and other commonplace application and naming conventions. By impersonating expected and vendor-relevant files and applications, operators and engineers may not notice the presence of the underlying malicious content and possibly end up running those masquerading as legitimate functions. \n\nApplications and other files commonly found on Windows systems or in engineering workstations have been impersonated before. This can be as simple as renaming a file to effectively disguise it in the ICS environment.\nDetection: Command Execution, File Metadata, File Modification, Process Metadata, Scheduled Job Creation, Scheduled Job Modification, Service Creation, Service Modification\nMitigation: Code Signing, Execution Prevention, Restrict File and Directory Permissions",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0849",
+      "tactic": "Evasion",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "593f5922-642c-4082-8a80-08f5892cbfbc",
+    "text": "Name: Project File Infection\nDescription: Adversaries may attempt to infect project files with malicious code. These project files may consist of objects, program organization units, variables such as tags, documentation, and other configurations needed for PLC programs to function. (Citation: Beckhoff) Using built in functions of the engineering software, adversaries may be able to download an infected program to a PLC in the operating environment enabling further [Execution](https://attack.mitre.org/tactics/TA0104) and [Persistence](https://attack.mitre.org/tactics/TA0110) techniques. (Citation: PLCdev) \n\nAdversaries may export their own code into project files with conditions to execute at specific intervals. (Citation: Nicolas Falliere, Liam O Murchu, Eric Chien February 2011) Malicious programs allow adversaries control of all aspects of the process enabled by the PLC. Once the project file is downloaded to a PLC the workstation device may be disconnected with the infected project file still executing. (Citation: PLCdev)\nDetection: File Modification\nMitigation: Audit, Code Signing, Encrypt Sensitive Information, Restrict File and Directory Permissions",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0873",
+      "tactic": "Persistence",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "aa08ab55-734e-4ea1-8063-f7842362fc34",
+    "text": "Name: Spearphishing Attachment\nDescription: Adversaries may use a spearphishing attachment, a variant of spearphishing, as a form of a social engineering attack against specific targets. Spearphishing attachments are different from other forms of spearphishing in that they employ malware attached to an email. All forms of spearphishing are electronically delivered and target a specific individual, company, or industry. In this scenario, adversaries attach a file to the spearphishing email and usually rely upon [User Execution](https://attack.mitre.org/techniques/T0863) to gain execution and access. (Citation: Enterprise ATT&CK October 2019) \n\nA Chinese spearphishing campaign running from December 9, 2011 through February 29, 2012, targeted ONG organizations and their employees. The emails were constructed with a high level of sophistication to convince employees to open the malicious file attachments. (Citation: CISA AA21-201A Pipeline Intrusion July 2021)\nDetection: Application Log Content, File Creation, Network Traffic Content, Process Creation\nMitigation: Antivirus/Antimalware, Network Intrusion Prevention, Restrict Web-Based Content, User Training",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0865",
+      "tactic": "Initial Access",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "a5d856b7-c24c-4319-ade6-baa7f43063ef",
+    "text": "Name: Manipulation of View\nDescription: Adversaries may attempt to manipulate the information reported back to operators or controllers. This manipulation may be short term or sustained. During this time the process itself could be in a much different state than what is reported. (Citation: Corero) (Citation: Michael J. Assante and Robert M. Lee) (Citation: Tyson Macaulay) \n\nOperators may be fooled into doing something that is harmful to the system in a loss of view situation. With a manipulated view into the systems, operators may issue inappropriate control sequences that introduce faults or catastrophic failures into the system. Business analysis systems can also be provided with inaccurate data leading to bad management decisions.\nMitigation: Communication Authenticity, Data Backup, Out-of-Band Communications Channel",
+    "metadata": {
+      "source": "MITRE_ICS",
+      "doc_type": "attack_technique",
+      "technique_id": "T0832",
+      "tactic": "Impact",
+      "component_id": null,
+      "stage_id": null
+    }
+  },
+  {
+    "id": "c6b4d97f-0795-4051-b031-fc861150f0ec",
+    "text": "Component: T101\nDescription: Raw Water Tank\nDesign Specification: Capacity: 1.8m\u00b3 Dia x H= 1.38 x 1.36\nMaterial: PE\nBrand Model: Rotamas CPE 1800",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "94060de5-8dad-48e6-8120-7df6f970afde",
+    "text": "Component: P101\nDescription: Raw Water Transfer Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS\nBrand Model: CALPEDA MXH 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "db628dde-5479-4ab4-b586-bb8b11f0774f",
+    "text": "Component: P102\nDescription: Raw Water Transfer Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS\nBrand Model: CALPEDA MXH 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P102",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "983ebbb3-c386-4122-a9d4-6a9fff34187b",
+    "text": "Component: LIT101\nDescription: Raw Water Tank LIT\nDesign Specification: Ultrasonic, Range 0.2 to 6m\nMaterial: Non Contact\nBrand Model: iSOLV LevelWizard II",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LIT101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "0fb912db-363f-4e98-9833-62102deb8a71",
+    "text": "Component: FIT101\nDescription: Raw Water FIT\nDesign Specification: Electromagnetic DN25\nMaterial: PTFE\nBrand Model: iSOLV EFS803/CFT183",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "0f93457a-da9b-4f0d-bee3-24c68836d4ba",
+    "text": "Component: MV101\nDescription: Raw Water Inlet On/Off Valve\nDesign Specification: DN 25, Electric Actuated\nMaterial: PVC\nBrand Model: Burkert EV2650",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "3ef241af-3345-471d-8325-e5ee9e4434e7",
+    "text": "Component: P201\nDescription: NaCl Dosing Pump\nDesign Specification: Capacity: 50 l/h @ 10 bar\nMaterial: Liquid end: PVDF Diaphragm: PTFE faced\nBrand Model: Prominent Sigma S1Ba",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "c05dfbd0-e24b-4f8a-8687-890dd7d9fde6",
+    "text": "Component: P202\nDescription: NaCl Dosing Pump\nDesign Specification: Capacity: 50 l/h @ 10 bar\nMaterial: Liquid end: PVDF Diaphragm: PTFE faced\nBrand Model: Prominent Sigma S1Ba",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P202",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b7a23643-3f7c-4818-a0fd-c60758f2bc1a",
+    "text": "Component: P203\nDescription: HCl Dosing Pump\nDesign Specification: Capacity: 0.78 l/h @ 08 bar\nMaterial: Liquid end: Plexiglas Diaphragm: PTFE faced\nBrand Model: Prominent GALa1601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P203",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "2f338f06-26c8-4d6e-91d2-89df34d16fb8",
+    "text": "Component: P204\nDescription: HCl Dosing Pump\nDesign Specification: Capacity: 0.78 l/h @ 08 bar\nMaterial: Liquid end: Plexiglas Diaphragm: PTFE faced\nBrand Model: Prominent GALa1601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P204",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "0d5c801e-3c07-49e6-96da-141d62f582eb",
+    "text": "Component: P205\nDescription: NaOCl Dosing Pump (FAC)\nDesign Specification: Capacity: 0.78 l/h @ 8 bar\nMaterial: Liquid end: Plexiglas Diaphragm: PTFE faced\nBrand Model: Prominent GALa1601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P205",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "c53328bc-38c2-4839-95f0-f888d7e6715e",
+    "text": "Component: P206\nDescription: NaOCl Dosing Pump (FAC)\nDesign Specification: Capacity: 0.78 l/h @ 8 bar\nMaterial: Liquid end: Plexiglas Diaphragm: PTFE faced\nBrand Model: Prominent GALa1601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P206",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "65aff0c1-022d-4f64-af6f-96a234c0df3d",
+    "text": "Component: P207\nDescription: NaOCl Dosing Pump (UF Cleaning)\nDesign Specification: Capacity: 65l/h @ 7 bar\nMaterial: Liquid end: PVDF Diaphragm: PTFE faced\nBrand Model: Prominent Sigma S1Ba",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P207",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b960b665-965f-4fd6-89e7-c55ec9e003f0",
+    "text": "Component: P208\nDescription: NaOCl Dosing Pump (UF Cleaning)\nDesign Specification: Capacity: 65l/h @ 7 bar\nMaterial: Liquid end: PVDF Diaphragm: PTFE faced\nBrand Model: Prominent Sigma S1Ba",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P208",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b635a92a-3a8d-485d-866f-77d41c06e94f",
+    "text": "Component: FIT201\nDescription: Raw Water to UF Feed Tank FIT\nDesign Specification: Electromagnetic DN25\nMaterial: PTFE\nBrand Model: iSOLV EFS803/CFT183",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "5c16a188-ea6c-486d-a9ec-6dbd1f0fb470",
+    "text": "Component: AIT201\nDescription: AIT - Conductivity\nDesign Specification: Up to 1000\u00b5S/cm\nMaterial: -\nBrand Model: Mettler Toledo M300 Single/ easySense Cond 71",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "fa961961-f13e-489d-ad31-6517752b97a9",
+    "text": "Component: AIT202\nDescription: AIT - pH & ORP\nDesign Specification: pH: 0-14 ORP: -800mV to 800mV\nMaterial: -\nBrand Model: Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT202",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "66bee46e-9941-41a3-bda5-ea9961f532ac",
+    "text": "Component: AIT203\nDescription: AIT - pH & ORP\nDesign Specification: pH: 0-14 ORP: -800mV to 800mV\nMaterial: -\nBrand Model: Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT203",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "e6853ca9-dd5c-4f36-8578-478bedc9d53e",
+    "text": "Component: LS201\nDescription: NaCl Level Switch\nDesign Specification: Low Alarm\nMaterial: PVC\nBrand Model: iSOLV LS880",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b294e6f9-fcc9-451f-bfb3-f9c7ee749ee9",
+    "text": "Component: LS202\nDescription: HCl Level Switch\nDesign Specification: Low Alarm\nMaterial: PVC\nBrand Model: iSOLV LS880",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS202",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b064ee5b-4129-49bb-81f3-502fa9683796",
+    "text": "Component: LS203\nDescription: NaOCl Level Switch\nDesign Specification: Low Alarm\nMaterial: PVC\nBrand Model: iSOLV LS880",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS203",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "0ef080a1-ce9a-4d21-950d-3b355720c543",
+    "text": "Component: MV201\nDescription: Raw Water Tank Outlet On/Off Valve\nDesign Specification: DN 25, Electric Actuated\nMaterial: PVC\nBrand Model: Burkert EV2650",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "14380383-4c47-402d-8997-4d30486abb9b",
+    "text": "Component: T301\nDescription: UF Feedwater Tank\nDesign Specification: Capacity: 1.8m\u00b3, Dia x H= 1.38 x 1.36\nMaterial: PE\nBrand Model: Rotamas CPE 1800",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "76110f61-5bd0-4863-b530-68e8c9832049",
+    "text": "Component: P301\nDescription: UF Feedwater Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS\nBrand Model: CALPEDA MXH 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "5e1617c2-57c6-4af3-84ae-9e10ab6033f5",
+    "text": "Component: P302\nDescription: UF Feedwater Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS\nBrand Model: CALPEDA MXH 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P302",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "01765df3-6213-4347-87f2-6283c27afba2",
+    "text": "Component: LIT301\nDescription: UF Feed Water Tank LIT\nDesign Specification: Ultrasonic, Range 0.2 to 6m\nMaterial: Non Contact\nBrand Model: ISOLV LevelWizard II",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LIT301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "385392f6-0a60-4207-9718-a738bc8b21f1",
+    "text": "Component: FIT301\nDescription: UF Feed Water FIT\nDesign Specification: Electromagnetic, DN25\nMaterial: PTFE\nBrand Model: ISOLV EFS803/CFT183",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "1f783ecd-1aad-4929-a723-1f7b0b6f66d8",
+    "text": "Component: FI301\nDescription: UF Feed Water FI\nDesign Specification: Rotameter, 1\"\nMaterial: PVC\nBrand Model: FSI Flowmeter",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FI301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "a3f6a88e-edea-4c0f-8fb5-cbcd58421f71",
+    "text": "Component: PSH301\nDescription: Pressure Switch\nDesign Specification: Switch High/ 0-7 Bar, Adjustable\nMaterial: SS316 Port\nBrand Model: CCS 604G2",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PSH301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "5ecea8fa-4682-48d6-bb10-ad3e3852bb76",
+    "text": "Component: DPSH301\nDescription: Differential Pressure Switch\nDesign Specification: Switch High/ 0-1 Bar\nMaterial: SS316 Port\nBrand Model: CCS 604DZ",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "DPSH301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "c852fde4-9b2f-48e0-8045-df2ac4ccf582",
+    "text": "Component: DPIT301\nDescription: Differential Pressure Indicating Transmitter\nDesign Specification: Range: 0-2 Bar\nMaterial: SS316 Port\nBrand Model: SPT 100 DP",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "DPIT301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "d7d0ea74-7beb-410c-b907-ad551bb0914c",
+    "text": "Component: MV301\nDescription: Backwash On/Off Valve\nDesign Specification: DN 25, Electric Actuated\nMaterial: PVC\nBrand Model: Burkert EV2650",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "732b8dbf-9fc7-46cb-8b8c-9392593315fa",
+    "text": "Component: MV302\nDescription: Backwash On/Off Valve\nDesign Specification: DN 25, Electric Actuated\nMaterial: PVC\nBrand Model: Burkert EV2650",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV302",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "d96dee31-347e-40f2-8a04-5822a6961a58",
+    "text": "Component: MV303\nDescription: Backwash On/Off Valve\nDesign Specification: DN 25, Electric Actuated\nMaterial: PVC\nBrand Model: Burkert EV2650",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV303",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "a8b38eee-88a3-45b1-b55d-7878c05f8b26",
+    "text": "Component: MV304\nDescription: Backwash On/Off Valve\nDesign Specification: DN 25, Electric Actuated\nMaterial: PVC\nBrand Model: Burkert EV2650",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV304",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "90e61f16-d6b0-4ee1-a429-8d14b091a908",
+    "text": "Component: T401\nDescription: RO Feedwater Tank\nDesign Specification: Capacity: 1.8m\u00b3, Dia x H= 1.38 x 1.36\nMaterial: PE\nBrand Model: Rotamas CPE 1800",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "2cd496e9-c71e-4a44-ab13-4dea6d1fd860",
+    "text": "Component: P401\nDescription: RO Feedwater Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS\nBrand Model: CALPEDA MXH 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "b8959928-27ba-4410-9044-4e01ca2ff53f",
+    "text": "Component: P402\nDescription: RO Feedwater Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS\nBrand Model: CALPEDA MXH 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P402",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "6cb9cbb6-4232-48bb-9880-e4e7c84e65e1",
+    "text": "Component: P403\nDescription: NaHSO\u2083 Dosing Pump\nDesign Specification: Capacity: 0.78 l/h @ 8 bar\nMaterial: Liquid end: Plexiglas, Diaphragm: PTFE faced\nBrand Model: Prominent GALa1601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P403",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "28795c8c-da42-4cb2-9176-051e0b5a8f8f",
+    "text": "Component: P404\nDescription: NaHSO\u2083 Dosing Pump\nDesign Specification: Capacity: 0.78 l/h @ 8 bar\nMaterial: Liquid end: Plexiglas, Diaphragm: PTFE faced\nBrand Model: Prominent GALa1601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P404",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "63df1f1a-5053-4102-91c7-c1800981c6a8",
+    "text": "Component: UV401\nDescription: UV Unit\nDesign Specification: Removal up to 0.5ppm, 2.3m\u00b3/h\nMaterial: SS316\nBrand Model: Aquafine Optima 200",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "UV401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "dae75b1c-65e1-49c0-a9eb-e8d2629cfcb7",
+    "text": "Component: LIT401\nDescription: RO Feed Water Tank LIT\nDesign Specification: Ultrasonic, Range 0.2 to 6m\nMaterial: Non Contact\nBrand Model: ISOLV LevelWizard II",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LIT401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "fa57f161-8679-427c-ac5e-3e194a183ed6",
+    "text": "Component: AIT401\nDescription: Hardness Monitor\nDesign Specification: Range: 0-10ppm\nMaterial: -\nBrand Model: HACH APA 6000",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "31073606-7082-4d17-931f-ffb32979da5f",
+    "text": "Component: AIT402\nDescription: AIT ~ORP\nDesign Specification: ORP: -800mV to 800mV\nMaterial: -\nBrand Model: Mettler Toledo M200 Single/easySense ORP 41",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT402",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "a90901e4-cc9b-4d21-9ccb-138d8c03c2fb",
+    "text": "Component: FIT401\nDescription: RO Feed FIT\nDesign Specification: Electromagnetic, DN25\nMaterial: PTFE\nBrand Model: ISOLV EFS803/CFT183",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "672fd4c5-04d6-4e3b-b6b2-33732b064db2",
+    "text": "Component: AIT501\nDescription: AIT - pH & ORP (RO Feed)\nDesign Specification: pH: 0-14 ORP: -800mV to 800mV\nMaterial: -\nBrand Model: Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "80b5532d-f774-4d3d-a5b2-56f222a85d6f",
+    "text": "Component: AIT502\nDescription: AIT - pH & ORP (RO Feed)\nDesign Specification: pH: 0-14 ORP: -800mV to 800mV\nMaterial: -\nBrand Model: Mettler Toledo M300 Dual/ easySense pH 32 & ORP 41",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "a4be6d13-1148-4c25-86cd-e5d2bd577142",
+    "text": "Component: PSL501\nDescription: Pressure Switch (Before High Pressure RO Pump)\nDesign Specification: Low Alarm: 0-10 Bar (Adjustable)\nMaterial: SS316 Port\nBrand Model: CCS 604G2",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PSL501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "ba0a84c9-6774-46fe-b8d5-492b64d77489",
+    "text": "Component: PSH501\nDescription: Pressure Switch (After High Pressure RO Pump)\nDesign Specification: High Alarm: 0-10 Bar (Adjustable)\nMaterial: SS316 Port\nBrand Model: CCS 604G1",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PSH501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "13a5ab8f-e812-4bc0-8f09-41e3517fd889",
+    "text": "Component: PIT501\nDescription: PIT (After High Pressure RO Pump)\nDesign Specification: 0-10 Bar\nMaterial: SS316 Port\nBrand Model: iSOLV SPT 100",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PIT501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "0279ba7b-8d33-4673-8f0b-427cf67fbe75",
+    "text": "Component: PIT503\nDescription: FIT (RO Concentrate)\nDesign Specification: 0-10 Bar\nMaterial: SS316 Port\nBrand Model: iSOLV SPT 100",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PIT503",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "50a80f92-f1ac-485d-ac59-7d51f3bfd1e6",
+    "text": "Component: PIT502\nDescription: FIT (RO Permeate)\nDesign Specification: 0-10 Bar\nMaterial: SS316 Port\nBrand Model: iSOLV SPT 100",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PIT502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "2982b7f9-1636-4bd3-af7a-6555ebab8e00",
+    "text": "Component: P501\nDescription: High Pressure RO Pump With VSD\nDesign Specification: Duty: 2.5 m\u00b3/h @ 5bar\nMaterial: Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS\nBrand Model: CALPEDA MXH 206",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "5403b656-9411-4ee5-bd3a-91352f2cd890",
+    "text": "Component: P505\nDescription: High Pressure RO Pump With VSD\nDesign Specification: Duty: 2.5 m\u00b3/h @ 5bar\nMaterial: Casing: Chrome Nickel SS, Impeller: Noryl, Shaft: SS\nBrand Model: CALPEDA MXH 206",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P505",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "3dab7f8c-5afa-4aa0-8014-64685e073e0a",
+    "text": "Component: AIT503\nDescription: AIT - Conductivity (RO Feed)\nDesign Specification: Up to 1000\u03bcS/cm\nMaterial: -\nBrand Model: Mettler Toledo M300 Dual/ easySense Cond 71",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT503",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "7098500f-8d9e-4f15-b3f2-24d60d0d4520",
+    "text": "Component: FIT503\nDescription: FIT (RO Concentrate)\nDesign Specification: Electromagnetic DN25\nMaterial: PTFE\nBrand Model: iSOLV EFS803/CFT183",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT503",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "06c23992-3d97-4c86-963d-41ee0759830c",
+    "text": "Component: AIT504\nDescription: AIT - Conductivity (RO Permeate)\nDesign Specification: Range: 0.02 to 20 \u03bcS/cm\nMaterial: -\nBrand Model: easySense Cond 71",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT504",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "c3765254-3be8-4ef9-858b-15e3cd012a8e",
+    "text": "Component: FIT504\nDescription: FIT (RO Recirculation)\nDesign Specification: Electromagnetic DN25\nMaterial: PTFE\nBrand Model: iSOLV EFS803/CFT183",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT504",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "da6f3556-1d36-49ed-b775-60602d1cf4a7",
+    "text": "Component: T601\nDescription: RO Permeate Tank\nDesign Specification: Capacity: 1.2m\u00b3 Dia\u00d7H = 1.16 x 1.24\nMaterial: PE\nBrand Model: Rotamas CPE 1200",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "0b509688-5e76-4e75-9ff6-a6c3005c9e96",
+    "text": "Component: P601\nDescription: RO Permeate Transfer Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS\nBrand Model: CALPEDA MXP 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "e30ee826-8357-41f8-8fb5-7a1dba5bf496",
+    "text": "Component: T602\nDescription: UF Backwash Tank\nDesign Specification: Capacity: 1.2m\u00b3 Dia\u00d7H = 1.16 x 1.24\nMaterial: PE\nBrand Model: Rotamas CPE 1200",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "5863094c-83da-459b-b76b-861024d31577",
+    "text": "Component: P602\nDescription: UF Backwash Tank Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS\nBrand Model: CALPEDA MXP 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "8ca9a0b9-360f-4682-972c-38040980d797",
+    "text": "Component: P603\nDescription: CIP Pump\nDesign Specification: Duty: 2.5 m\u00b3/h @ 20m\nMaterial: Casing: Chrome Nickel SS Impeller: Noryl Shaft: SS\nBrand Model: CALPEDA MXP 203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P603",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "38e5d9b9-7d1e-430f-b8b8-2df760fda464",
+    "text": "Component: LS601\nDescription: RO Permeate Tank Level Switch\nDesign Specification: Low & High Alarm\nMaterial: PVC\nBrand Model: iSOLV L5880",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "ffad0acf-7937-4aeb-847f-f1cf39663315",
+    "text": "Component: LS602\nDescription: UF Backwash Tank Level Switch\nDesign Specification: Low & High Alarm\nMaterial: PVC\nBrand Model: iSOLV L5880",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "a161603b-f3e2-4617-976f-2d804ab2f9fb",
+    "text": "Component: LS603\nDescription: CIP Tank Level Switch\nDesign Specification: Low & High Alarm\nMaterial: PVC\nBrand Model: iSOLV L5880",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS603",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "366f3b61-c424-4834-855f-83ecc45b224c",
+    "text": "Component: FIT601\nDescription: FIT (UF Backwash)\nDesign Specification: Electromagnetic DN25\nMaterial: PTFE\nBrand Model: iSOLV EFS803/CFT180",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "08f6191b-6abd-4bf1-802c-f4b0f5f0fb23",
+    "text": "Component: FI601\nDescription: FI (RO/UF Cleaning)\nDesign Specification: Rotameter; 1\"\nMaterial: PVC\nBrand Model: FSIV Flowmeter",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FI601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "77011b9a-bc1f-4cf0-8686-6b30894e682a",
+    "text": "Component: FI602\nDescription: FI (RO/UF Cleaning)\nDesign Specification: Rotameter; 1\"\nMaterial: PVC\nBrand Model: FSIV Flowmeter",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "component",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FI602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "f09b3efb-9ec5-4bdb-b374-96bdd2e874e2",
+    "text": "Component: FIT101\nConnects to: MV101",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "41b0dc88-f56d-4a22-8e8d-a143d5c65499",
+    "text": "Component: MV101\nConnects to: T101",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "ffc6e57d-d45c-4ad5-b691-1bb1409ea355",
+    "text": "Component: LIT101\nConnects to: T101",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LIT101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "e5663fd4-482a-4dc7-8d68-3b0cb424faf6",
+    "text": "Component: T101\nConnects to: P101, P102",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "258e650c-de1e-4688-9f80-2f591b25b972",
+    "text": "Component: P101\nConnects to: AIT201",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P101",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "3a0c4551-c40f-4b0f-9940-1e8b18eaee9e",
+    "text": "Component: P102\nConnects to: AIT201",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P102",
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "29aaf1a8-276a-4961-b016-31445cee639a",
+    "text": "Component: AIT201\nConnects to: P201, P202, P203, P204, P205, P206, P207, P208",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b134bc3d-70e6-483e-b7b6-2a1f0b41af59",
+    "text": "Component: AIT202\nConnects to: MV201",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT202",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "17dd1157-3cdb-4e9c-be4c-81dc95ced22d",
+    "text": "Component: AIT203\nConnects to: MV201",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT203",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "41ecb6e8-f687-4da9-a3f3-6124e8f3d355",
+    "text": "Component: P201\nConnects to: T201",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "cdafd5f6-7668-45a9-880f-5571ac8b9035",
+    "text": "Component: P202\nConnects to: T201",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P202",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "6017899e-772c-44e7-b482-3079924a9214",
+    "text": "Component: P203\nConnects to: T202",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P203",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "5e6b152d-6e50-4689-a940-7f61e790250f",
+    "text": "Component: P204\nConnects to: T202",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P204",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "b5c50ee6-3063-49bc-98fd-c03c5d2f2a58",
+    "text": "Component: P205\nConnects to: T203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P205",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "97e2a4dd-fa7f-49e9-94c5-99411e0ef033",
+    "text": "Component: P206\nConnects to: T203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P206",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "232f428f-1625-4856-abb7-fbd32ed290c6",
+    "text": "Component: P207\nConnects to: T203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P207",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "cfe0f291-eb9a-4fe2-8b0d-8d5dcce1b578",
+    "text": "Component: P208\nConnects to: T203",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P208",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "0b913d8d-606a-4d4f-bbe0-f26062af0207",
+    "text": "Component: MV201\nConnects to: T301",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV201",
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "a4191008-5ab9-4a5c-8e2e-b10df0e75194",
+    "text": "Component: LIT301\nConnects to: T301",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LIT301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "7c432f16-9da8-4695-b316-ddcc46293994",
+    "text": "Component: T301\nConnects to: P301, P302",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "d9dbf2f5-39b5-4376-bf3a-eb5e100b5df5",
+    "text": "Component: P301\nConnects to: FIT301",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "6c276437-f7fd-4e38-8306-c693232e1bc2",
+    "text": "Component: P302\nConnects to: FIT301",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P302",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "b709dcdd-43d0-468c-87f5-7cc1e60afd85",
+    "text": "Component: FIT301\nConnects to: FI301",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "a550ccf3-6cda-4bb3-b01a-4db08d05f49b",
+    "text": "Component: MV301\nConnects to: MV302, DPSH301, DPIT301",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "3b9e79a6-97f1-4769-8713-518ae8ba7440",
+    "text": "Component: MV302\nConnects to: T401",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV302",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "19ed5b9f-906f-4ce1-b2f8-f12b1e39d9dc",
+    "text": "Component: PSH301\nConnects to: MV303",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PSH301",
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "e8eed7c4-6bcf-4913-839c-65228cb47b9f",
+    "text": "Component: LIT401\nConnects to: T401",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LIT401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "8205ab76-8d78-45ff-aad8-7084d3dbb910",
+    "text": "Component: T401\nConnects to: P401, P402",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "1123a823-f06c-4132-8c83-955a7f3c160f",
+    "text": "Component: P401\nConnects to: AIT401",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "755653ab-fd28-4680-a069-2a6f7ff48536",
+    "text": "Component: P402\nConnects to: AIT401",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P402",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "e32b9158-c3fd-45de-9239-8e0c6b7ab67c",
+    "text": "Component: AIT401\nConnects to: FIT401",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "69c67091-f58e-4ce7-9019-936ef4e693e4",
+    "text": "Component: FIT401\nConnects to: UV401",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "e768b0d8-7e7d-4628-a8db-627748aed512",
+    "text": "Component: UV401\nConnects to: AIT402",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "UV401",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "9701bf68-5960-40b2-955a-7aa77890ad6e",
+    "text": "Component: AIT402\nConnects to: P403, P404, FIT501",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT402",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "af5c1637-029f-4104-a8f0-d6290a31ee7c",
+    "text": "Component: P403\nConnects to: T402",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P403",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "4f6dbc2b-141a-4f52-92eb-53f63316a820",
+    "text": "Component: P404\nConnects to: T402",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P404",
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "cedb13b7-edd2-4aaa-9b8e-99e91f58d9fb",
+    "text": "Component: FIT501\nConnects to: P501, P502, FIT504",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "8932af49-3d7e-4ce7-8a90-320807fc51c2",
+    "text": "Component: P501\nConnects to: PIT501",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "c5ef8960-694a-473c-abc6-088fa2a3fa7a",
+    "text": "Component: P502\nConnects to: PIT501",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "5b404d7b-e1d3-4eca-9792-948d546e20f1",
+    "text": "Component: PIT501\nConnects to: PSH501",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PIT501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "2425ca13-d010-495b-a1c1-e76f5e6d8dfd",
+    "text": "Component: PSH501\nConnects to: RO501",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PSH501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "ad26a824-c9e5-4c4d-9f8f-cbd84bc3b664",
+    "text": "Component: PSH501\nConnects to: RO502",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PSH501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "c56a3791-06a0-41c2-89d2-8622ade5ee61",
+    "text": "Component: RO501\nConnects to: PIT502, RO503",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "RO501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "febe8fb9-3be7-490e-8ac9-0efcb44aabc8",
+    "text": "Component: RO502\nConnects to: PIT502, RO503",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "RO502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "87534d2a-e466-4ae4-b49f-fc279435a3f5",
+    "text": "Component: RO503\nConnects to: PIT502, FIT503",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "RO503",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "b6ecaf44-8dd4-4a2d-b665-53f9fe20dcff",
+    "text": "Component: FIT503\nConnects to: PIT503",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT503",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "ec7260c0-0932-4a78-bd5e-e2e5e5447b7f",
+    "text": "Component: FIT504\nConnects to: MV504, MV502",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT504",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "287c0325-25f2-4ca9-9590-5ebee219a517",
+    "text": "Component: PIT503\nConnects to: MV504, MV502",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PIT503",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "18e43de8-fb89-48aa-9900-f5a730bde430",
+    "text": "Component: PIT502\nConnects to: AIT504",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "PIT502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "f2f0daa3-c49e-4a84-acd0-c58ceb87e717",
+    "text": "Component: AIT504\nConnects to: FIT502",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "AIT504",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "9f8a5124-c247-48f1-9549-2f72dc98d85f",
+    "text": "Component: FIT502\nConnects to: MV-501, MV503",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "FIT502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "4bcb470b-d214-485b-8740-6113cfc29abd",
+    "text": "Component: MV501\nConnects to: T601, T603",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV501",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "ccf95324-8047-41dc-b9a5-7ff7a5513850",
+    "text": "Component: MV502\nConnects to: T602",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "MV502",
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "a646ed7d-5f15-4e68-8082-90e3ed8594dd",
+    "text": "Component: LS601\nConnects to: T601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "13d116d2-801f-4914-889a-ae2c9cb593e2",
+    "text": "Component: T601\nConnects to: P601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T601",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "62529290-0230-437d-b95d-d07bd6599359",
+    "text": "Component: LS602\nConnects to: T602",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "d30ef810-3b12-4a2f-9b54-3c85e5ad1b89",
+    "text": "Component: T602\nConnects to: P602",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "7a3f18d6-cfdd-4bdf-87c1-05412453b55a",
+    "text": "Component: P602\nConnects to: FIT601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P602",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "2e0c7902-5472-47fe-8843-9ade3be8079d",
+    "text": "Component: LS603\nConnects to: T603",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "LS603",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "fc96cfc4-24ee-444f-b1b9-2e218f4662a5",
+    "text": "Component: T603\nConnects to: P603",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "T603",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "2771ad51-66d1-4313-873c-07b7d96a4bd3",
+    "text": "Component: P603\nConnects to: FI601",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "pid",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": "P603",
+      "stage_id": "P6"
+    }
+  },
+  {
+    "id": "10628611-216b-401b-8dac-b0b833e832a8",
+    "text": "Stage: P1\nName: Raw water supply & storage\nDescription: Stores and supplies raw water to the treatment process. Involves raw water tank, pumps, and initial flow measurement.\nComponents:\n- LIT101 (Raw water tank level sensor)\n- MV101 (Inlet control valve for raw water tank)\n- FIT101 (Raw water flow sensor)\n- P101 (Raw water pump)\n",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "stage",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": null,
+      "stage_id": "P1"
+    }
+  },
+  {
+    "id": "e0a84159-040e-4fce-865e-dd80f21c9825",
+    "text": "Stage: P2\nName: Chemical dosing\nDescription: Involves dosing the raw water with chemicals such as HCl, NaOCl, and NaCl to adjust pH and disinfect. A static mixer ensures proper mixing.\nComponents:\n- P201 (HCl dosing pump)\n- P203 (NaOCl dosing pump)\n- P205 (NaCl dosing pump)\n- FIT201 (Flow indicator transmitter for chemical dosing)\n- AIT201 (Analyzer indicator transmitter for chemical properties)\n- AIT202 (Analyzer indicator transmitter for pH)\n- AIT203 (Analyzer indicator transmitter for chlorine levels)\n- MV201 (Motorized valve for controlling flow after static mixer)\n",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "stage",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": null,
+      "stage_id": "P2"
+    }
+  },
+  {
+    "id": "6c185dc4-fdb9-4768-b081-59857829c29b",
+    "text": "Stage: P3\nName: Ultrafiltration (UF)\nDescription: Filters the chemically treated water through an ultrafiltration unit to remove fine particles and impurities.\nComponents:\n- LIT301 (UF feed tank level sensor)\n- DPIT301 (Differential pressure indicator transmitter for UF unit)\n- P301 (UF feed pump)\n",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "stage",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": null,
+      "stage_id": "P3"
+    }
+  },
+  {
+    "id": "a1832052-c0bb-42c4-b7cc-ee0ba8739fcb",
+    "text": "Stage: P4\nName: Dechlorination\nDescription: Dechlorinates the filtered water using UV lamps and adds NaHSO3 to neutralize residual chlorine. The water is then stored in an RO feed tank.\nComponents:\n- P401 (RO feed pump)\n- LIT401 (RO feed tank level sensor)\n- FIT401 (Flow indicator transmitter for RO feed)\n- AIT402 (Analyzer indicator transmitter for dechlorination process)\n",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "stage",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": null,
+      "stage_id": "P4"
+    }
+  },
+  {
+    "id": "02236db1-ad98-4e1c-a323-6c3f466f3d06",
+    "text": "Stage: P5\nName: Reverse Osmosis (RO)\nDescription: Processes the dechlorinated water through a reverse osmosis unit to remove dissolved salts and impurities, producing permeate and reject streams.\nComponents:\n- P501 (RO boost pump)\n- AIT503 (Analyzer indicator transmitter for cartridge filter)\n- AIT504 (Analyzer indicator transmitter for RO permeate)\n",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "stage",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": null,
+      "stage_id": "P5"
+    }
+  },
+  {
+    "id": "22e4e590-a594-4a87-bf3f-a7c26864d0a2",
+    "text": "Stage: P6\nName: RO permeate transfer, UF backwash\nDescription: Uses RO permeate to backwash and clean the UF membranes, recycling water back into the process.\nComponents:\n- P602 (UF backwash pump)\n",
+    "metadata": {
+      "source": "SWaT_DOC",
+      "doc_type": "stage",
+      "technique_id": null,
+      "tactic": null,
+      "component_id": null,
+      "stage_id": "P6"
+    }
+  }
+]
