@@ -17,7 +17,8 @@ with open(ATTACK_TECHNIQUES_JSON, "r") as f:
 for technique in tqdm(
     attack_techniques, desc="Creating attack technique documents", unit="documents"
 ):
-    text = f"Name: {technique['name']}"
+    text = f"ID: {technique['technique_id']}"
+    text += f"\nName: {technique['name']}"
     text += f"\nDescription: {technique['description']}"
     if technique.get("detections"):
         text += f"\nDetection: {', '.join(technique['detections'])}"
