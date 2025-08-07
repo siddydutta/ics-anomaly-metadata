@@ -32,3 +32,13 @@ python extract_pid_diagrams.py 5c2ae8f2-1ab4-4db5-a358-26bd1188d6a9
 cd testbed-overview/
 python extract_stage_list.py e2b9b8e4-d6fe-49ea-bbdf-adb171a0d2a1
 ```
+
+## Document Collation
+```shell
+python create_documents.py
+```
+
+## Persist Embeddings
+```shell
+python persist_embeddings.py
+```
